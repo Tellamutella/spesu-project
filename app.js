@@ -2,16 +2,19 @@ require('dotenv').config();
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const express = require('express');
-const favicon = require('serve-favicon');
-const hbs = require('hbs');
-const mongoose = require('mongoose');
-const logger = require('morgan');
-const path = require('path');
+
+const express      = require('express');
+const favicon      = require('serve-favicon');
+const hbs          = require('hbs');
+const mongoose     = require('mongoose');
+const logger       = require('morgan');
+const path         = require('path');
+const session = require("express-session");
+const MongoStore = require('connect-mongo')(session);
 
 
 mongoose
-  .connect('mongodb://localhost/spesu-project', { useNewUrlParser: true })
+  .connect('mongodb://localhost/spesu-project', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -30,6 +33,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(
+  session({
+    key: "user_sid",
+    secret: "basic-auth-secret",
+    resave: true,
+    saveUninitialized: true, // option when youre setting up the cookie for the session for the first time, whether it will automatically save or not
+    cookie: { maxAge: 24 * 60 * 60 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // 1 day
+    })
+  })
+);
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
