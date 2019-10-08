@@ -108,6 +108,7 @@ const spacesRoute = require('./routes/spaces')
 app.use('/', index);
 app.use('/', spacesRoute);
 
+app.use('/',require('./routes/book'));
 app.use("/auth", require("./routes/auth"));
 
 app.listen(3000, () => {

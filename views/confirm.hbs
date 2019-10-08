@@ -1,0 +1,16 @@
+<h1>{{name}}</h1>
+<h1>{{date}}</h1>
+<h1>{{description}}</h1>
+<h1>{{location}}</h1>
+<h1>{{id}}</h1>
+<h1>{{user.firstname}}</h1>
+
+  <form action="/book/confirm" method="POST">
+    <input type="hidden" name='name' value="{{name}}">
+    <input type="hidden" name='location' value="{{location}}">
+    <input type="hidden" name='description' value="{{description}}">
+    <input type="hidden" name='spaceId' value="{{id}}">
+    <input type="hidden" name='date' value="{{date}}">
+
+    <button type='sumbit'> Book now</button>
+  </form>

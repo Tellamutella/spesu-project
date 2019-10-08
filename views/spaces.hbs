@@ -1,10 +1,23 @@
 {{!-- spaces.hbs --}}
 <button><a href="/spaces/create">list your space</a></button>
+
+{{!-- shows booking if user with booking is logged in  --}}
+{{#if booked}}
+{{#each booked}}
+<h1>{{this.space.name}}</h1>
+<img src="{{this.space.image}}" alt="coffee shop">
+<h1> {{this.space.location}}</h1>
+<h1>{{this.space.description}}</h1>
+{{/each}}
+{{/if}}
+
+
+{{!-- default aviable spaces for booking  --}}
 <div class="spacesColumn">
   {{#each space}}
   <div class="spacesRow">
     <img src="{{image}}" alt="coffee shop">
-    <div "spaceColumn">
+    <div class="spaceColumn">
       <h3>{{name}}</h3>
       <p>Location: {{location}}</p>
       <p>Description: {{description}}</p>

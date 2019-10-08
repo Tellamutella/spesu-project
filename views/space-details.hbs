@@ -4,5 +4,15 @@
   <h1>{{space.name}}</h1>
   <p>Location:{{space.location}}</p>
   <p>Description: {{space.description}}</p>
-  <button><a href="/book">Book Now</a></button>
+
+
+{{!-- passing info and selected date by the user to confirmation page as a form! --}}
+  <form action="/book" method="POST">
+    <input type="hidden" name='name' value="{{space.name}}">
+    <input type="hidden" name='location' value="{{space.location}}">
+    <input type="hidden" name='description' value="{{space.description}}">
+    <input type="hidden" name='spaceId' value="{{space._id}}">
+    <input type="date" name='date' id="date" value="2019-10-01" min="2013-01-01" max="2019-10-02">
+    <button type='sumbit'> click me</button>
+  </form>
 </div>
