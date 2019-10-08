@@ -1,0 +1,15 @@
+{{!-- spaces.hbs --}}
+<button><a href="/spaces/create">list your space</a></button>
+<div class="spacesColumn">
+  {{#each space}}
+  <div class="spacesRow">
+    <img src="{{image}}" alt="coffee shop">
+    <div "spaceColumn">
+      <h3>{{name}}</h3>
+      <p>Location: {{location}}</p>
+      <p>Description: {{description}}</p>
+      <button><a href="/spaces/{{this._id}}">Space Details</a></button>
+    </div>
+  </div>
+  {{/each}}
+</div>

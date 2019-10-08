@@ -1,0 +1,16 @@
+.spacesColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacesRow {
+  display: flex;
+  flex-direction: row;
+  width:90vw;
+}
+
+.spacesRow img {
+  width: 50%;
+  height: auto;
+}
+

@@ -1,0 +1,20 @@
+<form action="/spaces/create" method="POST" enctype="multipart/form-data">
+  <h2>List your space</h2>
+  <input type="text" name="name" placeholder="Name of your space">
+
+  <select name="location">
+    <option>Amsterdam Centraal</option>
+    <option>Zuidas</option>
+    <option>Da Wallen</option>
+    <option>De Pijp</option>
+    <option>Oost</option>
+  </select>
+
+  <input type="text" name="description" placeholder="Descript your space">
+
+  <label>Upload an image of your space:</label>
+
+  <input type="file" name="spaceImage">
+  {{!-- <input hidden type="text" name="id" value="{{user._id}}"> --}}
+  <button id="formSubmit" type="submit">List Your Space</button>
+</form>
