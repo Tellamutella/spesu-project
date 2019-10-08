@@ -1,37 +1,60 @@
-.indexImg {
-  width: 100vw;
-  height: auto; }
 
-.indexColumn, .indexColumn2, .indexForm {
+#signup-form {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  text-align: center; }
 
-.indexColumn2 {
-  width: 90vw;
-  height: auto;
-  align-items: flex-start; }
+#signup-form input {
+  border: 1px grey solid;
+  margin: 10px;
+  height: 40px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center; }
 
-.indexForm {
-  width: 90vw;
-  height: 15vh;
-  align-items: center;
-  justify-content: space-evenly; }
-
-.indexButton {
-  width: 90vw;
-  height: 5vh;
-  background: #0FB6A8;
-  border: none;
+#signup-form button {
+  height: 40px;
+  width: 80%;
+  align-self: center;
   border-radius: 5px;
+  background: #42d187;
   color: white;
-  text-transform: uppercase; }
+  font-weight: bold; }
 
-.indexInput {
-  width: 90vw;
-  height: 5vh;
-  border: #EDF5F4 solid 1px;
-  border-radius: 5px; }
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  border: 1px black solid;
+  justify-content: space-between;
+  background: #191919; }
+
+.nav-login {
+  display: flex;
+  width: 250px; }
+
+.nav-login a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  line-height: 60px;
+  color: white;
+  font-weight: blod; }
+
+.nav-login a:hover {
+  color: black;
+  background: white; }
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00b7ff; }
 
 .spacesColumn {
   display: flex;
