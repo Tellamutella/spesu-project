@@ -30,7 +30,7 @@ router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
     // owner: mongoose.Types.ObjectId(req.body.id)
   })
     .then((space) => {
-      // res.redirect(`/spaces/${space.id}`);
+      res.redirect(`/spaces/${space.id}`);
       console.log("saved!")
     })
     .catch(err => {
