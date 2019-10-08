@@ -1,25 +1,11 @@
-#signup-form{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+@import "form";
+@import "nav";
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-#signup-form input{
-    border: 1px grey solid;
-    margin: 10px;
-    height: 40px;
-    border-radius: 3px;
-    text-indent: 10px;
-    width: 80%;
-    align-self: center;
-}
-
-#signup-form button{
-  height: 40px;
-  width: 80%;
-  align-self: center;
-  border-radius: 5px;
-  background: #42D187;
-  color: white;
-  font-weight: bold;
+a {
+  color: #00b7ff;
 }

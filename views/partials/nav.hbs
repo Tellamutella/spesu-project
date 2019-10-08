@@ -1,0 +1,14 @@
+<div class='nav-bar'>
+    <div class='logo'>
+    </div>
+
+    <div class='nav-login'>
+         <h1 style='color:white'>{{user.firstname}}</h1>
+        {{#if user}}
+        <a href="/auth/logout">logout</a>
+        {{else}}
+        <a href="/auth/login">login</a>
+        <a href="/auth/signup">signup</a>
+        {{/if}}
+    </div>
+</div>

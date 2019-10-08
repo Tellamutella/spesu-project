@@ -1,0 +1,30 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left:0;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  border: 1px black solid;
+  justify-content: space-between;
+  background: #191919;
+}
+
+.nav-login {
+  display: flex;
+  width: 250px;
+}
+
+.nav-login a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  line-height: 60px;
+  color: white;
+  font-weight: blod;
+}
+
+.nav-login a:hover {
+  color: black;
+  background: white;
+}
