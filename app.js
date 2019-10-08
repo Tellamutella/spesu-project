@@ -61,6 +61,13 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 
+app.use('/', (req,res,next)=>{
+  if(req.session.currentUser){
+      res.locals.user = req.session.currentUser;
+  }
+  next();
+})
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -103,11 +110,10 @@ app.use('/', (req, res, next) => {
   next();
 })
 
-
-
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/spaces'));
 app.use('/', require('./routes/users'));
+app.use('/',require('./routes/book'));
 app.use("/auth", require("./routes/auth"));
 
 app.listen(3000, () => {
