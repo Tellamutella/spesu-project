@@ -17,7 +17,7 @@ router.post("/signup", (req, res, next) => {
     if (user) {
       res.send("Username alaready taken");
     } else {
-      bcrypt.hash(req.body.password, bcryptSalt, function(err, hash) {
+      bcrypt.hash(req.body.password, bcryptSalt, function (err, hash) {
         if (err) {
           res.send(err.message);
         } else {
@@ -53,7 +53,7 @@ router.post("/login", (req, res, next) => {
           errorMessage: "username or password incorrect!"
         });
       } else {
-        bcrypt.compare(req.body.password, user.password, function(err, equal) {
+        bcrypt.compare(req.body.password, user.password, function (err, equal) {
           if (err) {
             console.log(err);
           } else if (!equal) {
@@ -63,7 +63,7 @@ router.post("/login", (req, res, next) => {
           } else {
             req.session.currentUser = user;
             console.log("you logged in!");
-            res.render("profile", { user: req.session.currentUser });
+            res.render("user-profile", { user: req.session.currentUser });
           }
         });
       }
@@ -79,8 +79,8 @@ router.get("/logout", (req, res) => {
 });
 
 
-router.get('/profile', (req,res)=>{
-    res.render('profile')
-});
+// router.get('/profile', (req,res)=>{
+//     res.render('profile')
+// });
 
 module.exports = router;

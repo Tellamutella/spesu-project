@@ -1,6 +1,13 @@
 .indexImg {
   width: 100vw;
-  height: auto; }
+  height: auto;
+  opacity: 0.8;
+  z-index: -1; }
+
+.indexColumn {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://i.pinimg.com/originals/29/20/dc/2920dc62d18471278ed6f9254a580c62.jpg");
+  background-size: cover;
+  background-blend-mode: darken; }
 
 .indexColumn, .indexColumn2, .indexForm {
   display: flex;
@@ -9,13 +16,7 @@
 
 .indexColumn2 {
   width: 90vw;
-  height: auto;
-  align-items: flex-start; }
 
-.indexForm {
-  width: 90vw;
-  height: 15vh;
-  align-items: center;
   justify-content: space-evenly; }
 
 .indexButton {
@@ -42,9 +43,6 @@
   flex-direction: row;
   width: 90vw; }
 
-.spacesRow img {
-  width: 50%;
-  height: auto; }
 
 #signup-form {
   display: flex;
@@ -71,41 +69,38 @@
 
 .nav-bar {
   position: fixed;
-  top: 0;
+  top: 2vh;
   left: 0;
   height: 60px;
   width: 100vw;
   display: flex;
-  border: 1px black solid;
+  border: none;
   justify-content: space-between;
-  background: #191919; }
+  background: none; }
 
 .nav-login {
   display: flex;
-  width: 250px; }
+  width: 400px; }
 
-.nav-login a {
-  width: 100%;
+.logIn, .signUp {
   text-align: center;
   text-decoration: none;
   line-height: 60px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  width: 100%; }
+
+.logIn {
+  color: #0FB6A8; }
+
+.signUp {
+  background: #0FB6A8;
   color: white;
-  font-weight: blod; }
+  border-radius: 5px; }
 
-.nav-login a:hover {
-  color: black;
-  background: white; }
-
-#signup-form {
-  display: flex;
-  flex-direction: column;
-  text-align: center; }
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00b7ff; }
-
-/*# sourceMappingURL=style.css.map */
+.signUp:hover {
+  color: #0FB6A8;
+  background: white;
+  transition: 0.4s; }
