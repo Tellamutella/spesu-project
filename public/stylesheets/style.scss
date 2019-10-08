@@ -1,5 +1,16 @@
+@import "index";
+@import "spaces";
+@import "space-details";
 @import "form";
 @import "nav";
+
+
+#signup-form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 
 body {
   padding: 50px;
