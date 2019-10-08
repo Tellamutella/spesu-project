@@ -96,11 +96,18 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 //   });
 // Express View engine setup
 
-const index = require('./routes/index');
-const spacesRoute = require('./routes/spaces')
-app.use('/', index);
-app.use('/', spacesRoute);
+app.use('/', (req, res, next) => {
+  if (req.session.currentUser) {
+    res.locals.user = req.session.currentUser;
+  }
+  next();
+})
 
+
+
+app.use('/', require('./routes/index'));
+app.use('/', require('./routes/spaces'));
+app.use('/', require('./routes/users'));
 app.use("/auth", require("./routes/auth"));
 
 app.listen(3000, () => {

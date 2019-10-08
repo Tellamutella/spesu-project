@@ -1,3 +1,71 @@
+.indexImg {
+  width: 100vw;
+  height: auto;
+  opacity: 0.8;
+  z-index: -1; }
+
+.indexColumn {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://i.pinimg.com/originals/29/20/dc/2920dc62d18471278ed6f9254a580c62.jpg");
+  background-size: cover;
+  background-blend-mode: darken; }
+
+.indexColumn, .indexColumn2, .indexForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.indexColumn2 {
+  width: 90vw;
+  height: 60vh;
+  align-items: flex-start;
+  margin-top: 27vh; }
+
+.indexColumn h1, p {
+  color: white; }
+
+.indexForm {
+  width: 90vw;
+  height: 15vh;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.indexButton {
+  width: 90vw;
+  height: 5vh;
+  background: #0FB6A8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase; }
+
+.indexInput {
+  width: 90vw;
+  height: 5vh;
+  border: #EDF5F4 solid 1px;
+  border-radius: 5px; }
+
+.spacesColumn {
+  display: flex;
+  flex-direction: column; }
+
+.spacesRow {
+  display: flex;
+  flex-direction: row;
+  width: 90vw; }
+
+.spacesRow img {
+  width: 50%;
+  height: auto; }
+
+.spaceDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5vh; }
+
+.spaceDetails img {
+  width: 100%;
+  height: auto; }
 
 #signup-form {
   display: flex;
@@ -24,72 +92,113 @@
 
 .nav-bar {
   position: fixed;
-  top: 0;
+  top: 2vh;
   left: 0;
   height: 60px;
   width: 100vw;
   display: flex;
-  border: 1px black solid;
+  border: none;
   justify-content: space-between;
-  background: #191919; }
+  background: none; }
 
 .nav-login {
   display: flex;
-  width: 250px; }
+  width: 400px; }
 
-.nav-login a {
-  width: 100%;
+.logIn, .signUp {
   text-align: center;
   text-decoration: none;
   line-height: 60px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  width: 100%; }
+
+.logIn {
+  color: #0FB6A8; }
+
+.signUp {
+  background: #0FB6A8;
   color: white;
-  font-weight: blod; }
+  border-radius: 5px; }
 
-.nav-login a:hover {
-  color: black;
-  background: white; }
+.signUp:hover {
+  color: #0FB6A8;
+  background: white;
+  transition: 0.4s; }
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+.logIn:hover {
+  color: #D0DCD7; }
 
-a {
-  color: #00b7ff; }
+.logo {
+  width: 10vw;
+  height: auto;
+  margin: 0 0 0 1.5vw; }
 
-.spacesColumn {
+.profileEdit {
+  width: 10vw;
+  height: auto;
+  margin: 7vh 0 0 82vw; }
+
+.profilePicture {
+  border-radius: 50%;
+  width: 40vw;
+  border: #EDF5F4 solid 2px; }
+
+.profileColumn, .profileColumn1 {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
 
-.spacesRow {
+.profileColumn {
+  height: 90vh;
+  width: 100vw;
+  justify-content: space-evenly; }
+
+.profileColumn h1 {
+  text-transform: uppercase;
+  color: #0FB6A8; }
+
+.profileBackground {
+  background: linear-gradient(#D1F2EE 35%, white 35%);
+  left: 0; }
+
+.profileRow {
   display: flex;
   flex-direction: row;
-  width: 90vw; }
+  align-items: center;
+  justify-content: center; }
 
-.spacesRow img {
-  width: 50%;
-  height: auto; }
+.profileRow img {
+  width: 28%;
+  margin: 0 2vw; }
+
+.proButtons {
+  border: #EDF5F4 solid 1px;
+  border-radius: 20px;
+  width: 70vw;
+  height: 10vw;
+  background: #0FB6A8;
+  margin: 0 2vw; }
+
+.proButtons a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-weight: bold; }
 
 #signup-form {
   display: flex;
   flex-direction: column;
   text-align: center; }
 
-#signup-form input {
-  border: 1px grey solid;
-  margin: 10px;
-  height: 40px;
-  border-radius: 3px;
-  text-indent: 10px;
-  width: 80%;
-  align-self: center; }
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0; }
 
-#signup-form button {
-  height: 40px;
-  width: 80%;
-  align-self: center;
-  border-radius: 5px;
-  background: #42D187;
-  color: white;
-  font-weight: bold; }
+a {
+  color: #00b7ff; }
 
 /*# sourceMappingURL=style.css.map */

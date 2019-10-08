@@ -1,9 +1,9 @@
 {{!-- spaces.hbs --}}
-<button><a href="/spaces/create">list your space</a></button>
+<button><a href="/spaces/create">List your space</a></button>
 <div class="spacesColumn">
   {{#each space}}
   <div class="spacesRow">
-    <img src="{{image}}" alt="coffee shop">
+    <img src="/{{image}}" alt="coffee shop">
     <div "spaceColumn">
       <h3>{{name}}</h3>
       <p>Location: {{location}}</p>
