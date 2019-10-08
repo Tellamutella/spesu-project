@@ -1,4 +1,5 @@
 @import "form";
+@import "nav";
 
 body {
   padding: 50px;
@@ -7,46 +8,4 @@ body {
 
 a {
   color: #00b7ff;
-}
-
-.indexImg {
-  width: 100vw;
-  height: auto;
-}
-
-.indexColumn,
-.indexColumn2,
-.indexForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.indexColumn2 {
-  width: 90vw;
-  height: auto;
-  align-items: flex-start;
-}
-
-.indexForm {
-  width: 90vw;
-  height: 15vh;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.indexButton {
-  width: 90vw;
-  height: 5vh;
-  background: #0fb6a8;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  text-transform: uppercase;
-}
-
-.indexInput {
-  width: 90vw;
-  height: 5vh;
-  border: #edf5f4 solid 1px;
-  border-radius: 5px;
 }

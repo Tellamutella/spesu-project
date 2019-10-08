@@ -29,7 +29,7 @@ router.post("/signup", (req, res, next) => {
           })
             .then(user => {
               console.log("user saved!");
-              res.render('auth/login')
+              res.render("auth/login");
             })
             .catch(err => {
               console.log(err);
@@ -46,9 +46,9 @@ router.get("/login", (req, res, next) => {
 
 router.post("/login", (req, res, next) => {
   User.findOne({ username: req.body.username })
-    .then((user) => {
+    .then(user => {
       if (!user) {
-        console.log("username or password incorrect!")
+        console.log("username or password incorrect!");
         res.render("auth/login", {
           errorMessage: "username or password incorrect!"
         });
@@ -61,9 +61,9 @@ router.post("/login", (req, res, next) => {
               errorMessage: "username or password incorrect!"
             });
           } else {
-            req.session.user = user;
-            console.log('you logged in!')
-            res.render('index')
+            req.session.currentUser = user;
+            console.log("you logged in!");
+            res.render("profile", { user: req.session.currentUser });
           }
         });
       }
@@ -71,6 +71,16 @@ router.post("/login", (req, res, next) => {
     .catch(err => {
       console.log(err);
     });
+});
+
+router.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+});
+
+
+router.get('/profile', (req,res)=>{
+    res.render('profile')
 });
 
 module.exports = router;

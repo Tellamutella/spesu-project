@@ -1,16 +1,10 @@
 <div class="login">
-  <form action="/auth/login" method="POST">
+  <form action="/auth/login" method="POST" id='signup-form'>
     <h2>
       login
     </h2>
-    <label for="username">
-      username
-    </label>
-    <input type="text" name='username'>
-    <label for="password">
-      password
-    </label>
-    <input type="password" name='password'>
+    <input type="text" name='username' placeholder="Username">
+    <input type="password" name='password' placeholder='Password'>
     <button type="submit">
       Login
     </button>

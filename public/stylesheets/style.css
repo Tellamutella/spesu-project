@@ -21,48 +21,38 @@
   color: white;
   font-weight: bold; }
 
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  border: 1px black solid;
+  justify-content: space-between;
+  background: #191919; }
+
+.nav-login {
+  display: flex;
+  width: 250px; }
+
+.nav-login a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  line-height: 60px;
+  color: white;
+  font-weight: blod; }
+
+.nav-login a:hover {
+  color: black;
+  background: white; }
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00b7ff; }
-
-.indexImg {
-  width: 100vw;
-  height: auto; }
-
-.indexColumn,
-.indexColumn2,
-.indexForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.indexColumn2 {
-  width: 90vw;
-  height: auto;
-  align-items: flex-start; }
-
-.indexForm {
-  width: 90vw;
-  height: 15vh;
-  align-items: center;
-  justify-content: space-evenly; }
-
-.indexButton {
-  width: 90vw;
-  height: 5vh;
-  background: #0fb6a8;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  text-transform: uppercase; }
-
-.indexInput {
-  width: 90vw;
-  height: 5vh;
-  border: #edf5f4 solid 1px;
-  border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */
