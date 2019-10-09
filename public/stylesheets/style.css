@@ -57,7 +57,6 @@
   width: 90vw;
   border: #cdcdcd solid 0.2px; }
 
-.spacesBox img {
   width: 50%;
   height: auto; }
 
@@ -246,14 +245,7 @@
   flex-direction: column;
   text-align: center; }
 
-body {
-  font: 14px Helvetica;
-  margin: 0; }
-
 a {
   color: #00b7ff; }
-
-.marginLR {
-  margin: 0 4vw 0 4vw; }
 
 /*# sourceMappingURL=style.css.map */
