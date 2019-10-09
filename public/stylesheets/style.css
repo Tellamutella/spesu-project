@@ -44,16 +44,19 @@
   border: #EDF5F4 solid 1px;
   border-radius: 5px; }
 
+.spaceMarginTop {
+  margin-top: 90px; }
+
 .spacesColumn {
   display: flex;
   flex-direction: column; }
 
-.spacesRow {
+.spacesBox {
   display: flex;
   flex-direction: row;
-  width: 90vw; }
+  width: 90vw;
+  border: #cdcdcd solid 0.2px; }
 
-.spacesRow img {
   width: 50%;
   height: auto; }
 
@@ -66,6 +69,50 @@
 .spaceDetails img {
   width: 100%;
   height: auto; }
+
+.booked {
+  margin: 10px 0 15px 0;
+  display: flex;
+  flex-direction: row; }
+
+.bookedMainTitle {
+  font-size: 1.2rem;
+  color: #484848; }
+
+.bookedBox {
+  width: 30%;
+  margin: 0 0 0 10px;
+  border: #cdcdcd solid 0.2px;
+  box-shadow: 1px 1px 5px #cdcdcd; }
+
+.bookedBox img {
+  width: 100%;
+  height: 100px; }
+
+.bookedBoxTitle {
+  font-size: 0.8rem;
+  margin: 0 0 0 5px;
+  color: #484848; }
+
+.bookedBox h2 {
+  font-size: 0.5rem;
+  margin: 0 0 5px 5px;
+  color: #484848; }
+
+.spaceSearchRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.spaceSearch img {
+  width: 30px;
+  height: 30px; }
+
+.spaceInput {
+  height: 40px;
+  width: 80%;
+  border: #CDCDCD 1px solid;
+  box-shadow: 1px 1px 6px #dddddd; }
 
 #signup-form {
   display: flex;
@@ -103,7 +150,9 @@
 
 .nav-login {
   display: flex;
-  width: 400px; }
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
 
 .logIn, .signUp {
   text-align: center;
@@ -112,16 +161,18 @@
   font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  width: 100%; }
+  letter-spacing: 1.5px; }
 
 .logIn {
-  color: #0FB6A8; }
+  color: #0FB6A8;
+  margin-right: 10px; }
 
 .signUp {
   background: #0FB6A8;
   color: white;
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-right: 15px; }
 
 .signUp:hover {
   color: #0FB6A8;
@@ -193,10 +244,6 @@
   display: flex;
   flex-direction: column;
   text-align: center; }
-
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin: 0; }
 
 a {
   color: #00b7ff; }
