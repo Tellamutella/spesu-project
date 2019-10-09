@@ -16,7 +16,17 @@
 
 .indexColumn2 {
   width: 90vw;
+  height: 60vh;
+  align-items: flex-start;
+  margin-top: 27vh; }
 
+.indexColumn h1, p {
+  color: white; }
+
+.indexForm {
+  width: 90vw;
+  height: 15vh;
+  align-items: center;
   justify-content: space-evenly; }
 
 .indexButton {
@@ -43,6 +53,19 @@
   flex-direction: row;
   width: 90vw; }
 
+.spacesRow img {
+  width: 50%;
+  height: auto; }
+
+.spaceDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5vh; }
+
+.spaceDetails img {
+  width: 100%;
+  height: auto; }
 
 #signup-form {
   display: flex;
@@ -104,3 +127,78 @@
   color: #0FB6A8;
   background: white;
   transition: 0.4s; }
+
+.logIn:hover {
+  color: #D0DCD7; }
+
+.logo {
+  width: 10vw;
+  height: auto;
+  margin: 0 0 0 1.5vw; }
+
+.profileEdit {
+  width: 10vw;
+  height: auto;
+  margin: 7vh 0 0 82vw; }
+
+.profilePicture {
+  border-radius: 50%;
+  width: 40vw;
+  border: #EDF5F4 solid 2px; }
+
+.profileColumn, .profileColumn1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.profileColumn {
+  height: 90vh;
+  width: 100vw;
+  justify-content: space-evenly; }
+
+.profileColumn h1 {
+  text-transform: uppercase;
+  color: #0FB6A8; }
+
+.profileBackground {
+  background: linear-gradient(#D1F2EE 35%, white 35%);
+  left: 0; }
+
+.profileRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+.profileRow img {
+  width: 28%;
+  margin: 0 2vw; }
+
+.proButtons {
+  border: #EDF5F4 solid 1px;
+  border-radius: 20px;
+  width: 70vw;
+  height: 10vw;
+  background: #0FB6A8;
+  margin: 0 2vw; }
+
+.proButtons a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-weight: bold; }
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0; }
+
+a {
+  color: #00b7ff; }
+
+/*# sourceMappingURL=style.css.map */
