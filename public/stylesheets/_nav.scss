@@ -12,7 +12,9 @@
 
 .nav-login {
   display: flex;
-  width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .logIn, .signUp {
@@ -23,15 +25,17 @@
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  width: 100%;
 }
 .logIn {
   color:#0FB6A8;
+  margin-right: 10px;
 }
 .signUp {
   background:#0FB6A8;
   color: white;
   border-radius: 5px;
+  padding: 0 5px;
+  margin-right: 15px;
 }
 
  .signUp:hover {
