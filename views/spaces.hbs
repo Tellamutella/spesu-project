@@ -1,28 +1,41 @@
 {{!-- spaces.hbs --}}
-<button><a href="/spaces/create">list your space</a></button>
-
 {{!-- shows booking if user with booking is logged in  --}}
-{{#if booked}}
-{{#each booked}}
-<h1>{{this.space.name}}</h1>
-<img src="{{this.space.image}}" alt="coffee shop">
-<h1> {{this.space.location}}</h1>
-<h1>{{this.space.description}}</h1>
-{{/each}}
-{{/if}}
+<div class="marginLR">
 
+  <form class="spaceMarginTop spaceSearchRow" action="/location" method="POST" class="indexForm">
+    <button class="spaceSearch" type="submit"><img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTueLhxCgdP_rTXRL0Wzi2vj92ECAJBR9E4TfVmnfoEGw1Czbk6"
+        alt=""></button>
+    <input class="spaceInput" type="text" name="location" placeholder="Search for your next office">
+  </form>
 
-{{!-- default aviable spaces for booking  --}}
-<div class="spacesColumn">
-  {{#each space}}
-  <div class="spacesRow">
-    <img src="{{image}}" alt="coffee shop">
-    <div class="spaceColumn">
-      <h3>{{name}}</h3>
-      <p>Location: {{location}}</p>
-      <p>Description: {{description}}</p>
-      <button><a href="/spaces/{{this._id}}">Space Details</a></button>
+  {{#if booked}}
+  <h1 class="bookedMainTitle">Your Booked Spaces</h1>
+  <div class="booked">
+    {{#each booked}}
+    <div class="bookedBox">
+      <img src="{{this.space.image}}" alt="coffee shop">
+      <h1 class="bookedBoxTitle">{{this.space.name}}</h1>
+      <h2>{{this.bookingPeriod}}</h2>
     </div>
+    {{/each}}
   </div>
-  {{/each}}
+  {{/if}}
+
+
+  {{!-- default aviable spaces for booking  --}}
+  <div class="spacesColumn">
+    {{#each space}}
+    <div class="spacesBox">
+      <img src="{{image}}" alt="coffee shop">
+      <div class="spaceColumn">
+        <h3>{{name}}</h3>
+        <p>Location: {{location}}</p>
+        <p>Description: {{description}}</p>
+        <button><a href="/spaces/{{this._id}}">Space Details</a></button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
 </div>

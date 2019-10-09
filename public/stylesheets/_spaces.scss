@@ -1,15 +1,19 @@
+.spaceMarginTop {
+  margin-top: 90px;
+}
 .spacesColumn {
   display: flex;
   flex-direction: column;
 }
 
-.spacesRow {
+.spacesBox {
   display: flex;
   flex-direction: row;
-  width:90vw;
+  width: 90vw;
+  border: #cdcdcd solid 0.2px;
 }
 
-.spacesRow img {
+.spacesBox img {
   width: 50%;
   height: auto;
 }
@@ -26,5 +30,55 @@
   height: auto;
 }
 
+.booked {
+  margin: 10px 0 15px 0;
+  display: flex;
+  flex-direction: row;
+}
 
+.bookedMainTitle{
+  font-size: 1.2rem;
+  color: #484848;
+}
+
+.bookedBox {
+  width: 30%;
+  margin: 0 0 0 10px;
+  border: #cdcdcd solid 0.2px;
+  box-shadow: 1px 1px 5px #cdcdcd;
+}
+
+.bookedBox img {
+  width: 100%;
+  height: 100px;
+}
+
+.bookedBoxTitle {
+  font-size: 0.8rem;
+  margin: 0 0 0 5px;
+  color: #484848;
+}
+
+.bookedBox h2 {
+  font-size: 0.5rem;
+  margin: 0 0 5px 5px;
+  color: #484848;
+}
+
+.spaceSearchRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.spaceSearch img {
+  width: 30px;
+  height: 30px;
+}
+.spaceInput {
+height: 40px;
+width: 80%;
+border: #CDCDCD 1px solid;
+box-shadow: 1px 1px 6px #dddddd;
+}
 
