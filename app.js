@@ -37,6 +37,9 @@ const debug = require("debug")(
 const app = express();
 
 app.locals.MAP_BOX_API_KEY = process.env.MAP_BOX_API_KEY
+
+app.locals.BASEURL = process.env.BASEURL
+
 // Middleware Setup
 app.use(logger("dev"));
 app.use(bodyParser.json());
