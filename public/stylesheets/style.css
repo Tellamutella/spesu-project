@@ -523,7 +523,7 @@ br {
   top: 0;
   display: none; }
 
-.logIn, .signUp {
+.logIn, .signUp, .logIn2 {
   font-size: 0.9rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -531,7 +531,7 @@ br {
   letter-spacing: 0.9px;
   margin-left: 10px; }
 
-.logIn {
+.logIn, .logIn2 {
   color: #0FB6A8;
   margin: 10px 10px 0 0; }
 
@@ -549,6 +549,9 @@ br {
 
 .logIn:hover {
   color: #484848; }
+
+.logIn2:hover {
+  color: white; }
 
 .signUp:hover {
   background-color: white;
@@ -576,6 +579,9 @@ br {
   display: flex;
   flex-direction: column; }
 
+.profileColumn1 {
+  align-items: center; }
+
 .profileColumn {
   align-items: center;
   height: auto;
@@ -588,7 +594,7 @@ br {
   color: #0FB6A8; }
 
 .profileBackground {
-  background: linear-gradient(#D1F2EE 30%, white 30%);
+  background: linear-gradient(#D1F2EE 20%, white 20%);
   left: 0; }
 
 .profileColumn1 img {
@@ -658,26 +664,6 @@ br {
 .yourSpaceBox h2 {
   color: #484848;
   font-size: 1rem; }
-
-.yourSpaceBox h3 {
-  color: #484848;
-  font-size: 0.8rem; }
-
-@media (min-width: 500px) {
-  .profileBooked {
-    margin: 10px 0 15px 0;
-    flex-direction: row;
-    width: 90vw;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .profileBookedBox {
-    margin: 0 2px 10px 2px;
-    flex-direction: column;
-    width: 28vw; }
-  .profileBookedBox img {
-    height: 12vh; }
-  .profileCover {
-    width: 100%; } }
 
 .space-details-container {
   padding: 20px;
