@@ -1,16 +1,26 @@
-<h1>{{name}}</h1>
-<h1>{{date}}</h1>
-<h1>{{description}}</h1>
-<h1>{{location}}</h1>
-<h1>{{id}}</h1>
-<h1>{{user.firstname}}</h1>
+<div class="marginLR spaceMarginTop ">
+  <h1 class="confirmMainTitle">Review and confirm</h1>
+  <div class="paper confirmColRow">
+    <div class="confirmBox">
+      <div>
+        <h3>Hey, {{user.firstname}}! Checkout your booking details and confirm!</h3>
 
-  <form action="/book/confirm" method="POST">
-    <input type="hidden" name='name' value="{{name}}">
-    <input type="hidden" name='location' value="{{location}}">
-    <input type="hidden" name='description' value="{{description}}">
-    <input type="hidden" name='spaceId' value="{{id}}">
-    <input type="hidden" name='date' value="{{date}}">
-
-    <button type='sumbit'> Book now</button>
-  </form>
+        <p><span>Location:</span> {{name}}</p>
+        <p><span>Date:</span> {{date}}</p>
+        <p><span>Time:</span> {{location}}</p>
+        <p><span>Address:</span> {{address}}</p>
+        <br>
+      </div>
+      <form action="/book/confirm" method="POST">
+        <input type="hidden" name='name' value="{{name}}">
+        <input type="hidden" name='location' value="{{location}}">
+        <input type="hidden" name='description' value="{{description}}">
+        <input type="hidden" name='spaceId' value="{{id}}">
+        <input type="hidden" name='date' value="{{date}}">
+        <button class="confirmBtn" type='sumbit'>Confirm</button>
+      </form>
+    </div>
+    <br>
+    <img class="confirmImg confirmCover" src="/{{image}}">
+  </div>
+</div>

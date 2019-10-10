@@ -67,9 +67,9 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 
-app.use('/', (req,res,next)=>{
-  if(req.session.currentUser){
-      res.locals.user = req.session.currentUser;
+app.use('/', (req, res, next) => {
+  if (req.session.currentUser) {
+    res.locals.user = req.session.currentUser;
   }
   next();
 })
@@ -120,7 +120,10 @@ app.use('/', (req, res, next) => {
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/spaces'));
 app.use('/', require('./routes/users'));
-app.use('/',require('./routes/book'));
+app.use('/', require('./routes/book'));
 app.use("/auth", require("./routes/auth"));
 
+
 module.exports = app;
+
+app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
