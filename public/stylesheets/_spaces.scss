@@ -16,6 +16,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
+  width: 100%;
   color: #484848;
 }
 
@@ -50,7 +51,8 @@
   border-radius: 5px;
   background: #0fb6a8;
   border: none;
-  width: 70%;
+  height: 30px;
+  width: 150px;
   margin: 0 0 1vh 0;
 
 }
@@ -73,6 +75,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: start;
+}
+
+.bookedBox {
+  width: 28vw;
+  margin: 15px 5px 0 5px;
+  border: #cdcdcd solid 0.2px;
+  box-shadow: 1px 1px 5px #cdcdcd;
+  border-radius: 2px;
 }
 
 .bookedMainTitle{
@@ -80,15 +91,9 @@
   color: #484848;
 }
 
-.bookedBox {
-  width: 25vw;
-  margin: 15px 0 0 10px;
-  border: #cdcdcd solid 0.2px;
-  box-shadow: 1px 1px 5px #cdcdcd;
-}
-
 .bookedBox img {
   width: 100%;
+  border-radius: 2px;
 }
 
 .bookedBoxTitle {
@@ -154,19 +159,33 @@ text-indent: 10px;
     width: 300px;
     height: auto;
   }
+  .booked {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  
+  .bookedBox {
+    width: 20vw;
+    margin: 15px 5px 0 5px;
+    border: #cdcdcd solid 0.2px;
+    box-shadow: 1px 1px 5px #cdcdcd;
+  }
 }
 
 @media(min-width: 767px) and (max-width: 961px) {
   .spacesColRow {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
   }
 
   .spacesBox {
     display: flex;
     flex-direction: row;
-    width: 702px;
+    width: 92vw;
     height: auto;
     margin: 0 0 20px 0;
     border: solid 1px #EDF5F4;
@@ -176,28 +195,41 @@ text-indent: 10px;
     height: auto;
   }
   .mapSpace {
-    margin: 2vh 5vw 0 2vw;
+    margin: 2vh 5vw 0 0;
     display: initial;
-  }
-  .mapSpace img {
-    height: 1160px;
+    height: 400px;
   }
   .cover {
-    width: 25vw;
+    width: 92vw;
     object-fit: cover
+  }
+
+  .booked {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  
+  .bookedBox {
+    width: 20vw;
+    margin: 15px 5px 0 5px;
+    border: #cdcdcd solid 0.2px;
+    box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
 
 @media (min-width: 962px) and (max-width:1024px) {
   .spacesColRow {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
   }
   .spacesBox {
     display: flex;
     flex-direction: row;
-    width: 702px;
+    width: 92vw;
     height: auto;
     margin: 0 0 20px 0;
     border: solid 1px #EDF5F4;
@@ -207,16 +239,27 @@ text-indent: 10px;
     height: auto;
   }
   .mapSpace {
-    height: auto;
-    margin: 2vh 5vw 0 2vw;
+    height: 400px;
+    margin: 2vh 0 0 0;
     display: initial;
   }
-  .mapSpace img {
-    height: 1160px;
-  }
   .cover {
-    width: 35vw;
+    width: 92vw;
     object-fit: cover
+  }
+  .booked {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  
+  .bookedBox {
+    width: 192px;
+    margin: 15px 5px 0 5px;
+    border: #cdcdcd solid 0.2px;
+    box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
 
@@ -253,6 +296,21 @@ text-indent: 10px;
   .cover {
     width: 50vw;
     object-fit: cover
+  }
+
+  .booked {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  
+  .bookedBox {
+    width: 192px;
+    margin: 15px 5px 0 5px;
+    border: #cdcdcd solid 0.2px;
+    box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
 

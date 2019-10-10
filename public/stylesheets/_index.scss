@@ -3,16 +3,17 @@
   width: 100vw;
   height: auto; 
   opacity: 0.8;
-  z-index: -1;
+  z-index: -2;
 }
 
 .coverBackground {
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url("https://i.pinimg.com/originals/29/20/dc/2920dc62d18471278ed6f9254a580c62.jpg");
-  background-size: cover;
+  width: 100vw;
+  height: 90vh;
   background-blend-mode: darken;
 }
 
-.indexColumn, .indexColumn2, .indexForm {
+.indexColumn, .indexColumn2, .indexForm, .indexColRow {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,31 +31,6 @@
   color: white;
   font-size: 1.3rem;
   font-weight: 100;
-}
-
-.indexForm {
-  width: 90vw; 
-  height: 15vh;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.indexButton {
-  width: 90vw;
-  height: 5vh;
-  background: #0FB6A8;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.indexInput {
-  width: 90vw;
-  height: 5vh;
-  border: #EDF5F4 solid 1px;
-  border-radius: 5px;
-  text-indent: 10px;
 }
 
 .indexTitleColor{
@@ -90,4 +66,75 @@
 
 br {
   color: #484848;
+}
+
+.searchColRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.indexForm {
+  width: 90vw; 
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0;
+}
+.indexButton {
+  width: 90vw;
+  height: 5vh;
+  background: #0FB6A8;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.indexButton a {
+  text-decoration: none;
+  color: white;
+}
+.indexInput {
+  width: 90vw;
+  height: 5vh;
+  border: #EDF5F4 solid 1px;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+@media (min-width: 767px) {
+  .indexColRow {
+    flex-direction: row;
+  }
+
+  .searchColRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90vw;
+  }
+  .indexForm {
+    width:60vw;
+  }
+
+  .indexInput {
+    width: 60vw;
+  }
+  .indexButton {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 961px) {
+  .indexColumn2 {
+    margin: 27vh 10vw 0 10vw;
+  }
+}
+
+@media (min-width: 962px) {
+  .indexColumn2 {
+    margin: 27vh 30vw 0 30vw;
+  }
 }
