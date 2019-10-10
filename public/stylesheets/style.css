@@ -665,15 +665,6 @@ br {
   color: #484848;
   font-size: 1rem; }
 
-.yourSpaceBox h3 {
-  color: #484848;
-  font-size: 0.8rem; }
-
-@media (min-width: 500px) {
-  .profileBackground {
-    background: linear-gradient(#D1F2EE 220px, white 220px);
-    left: 0; } }
-
 .space-details-container {
   padding: 20px;
   margin-top: 80px; }
