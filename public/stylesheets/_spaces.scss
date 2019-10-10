@@ -1,20 +1,48 @@
 .spaceMarginTop {
-  margin-top: 90px;
+  padding-top: 80px;
+}
+
+.spaceMarginTop h1{
+  margin: 10px 0 0 0;
 }
 .spacesColumn {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+}
+
+.spacesBoxColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  color: #484848;
+}
+
+.marginLeft {
+  margin: 0 0 0 15px;
+}
+
+.spacesBox  p, button {
+  margin: 2px 0;
+}
+
+.spacesBox h3 {
+  margin: 1vh 0 1vh 0;
+  font-size: 1.2rem;
 }
 
 .spacesBox {
   display: flex;
   flex-direction: row;
-  width: 90vw;
-  border: #cdcdcd solid 0.2px;
+  width: 92vw;
+  height: auto;
+  margin: 0 0 20px 0;
+  border: solid 1px #EDF5F4;
 }
 
 .spacesBox img {
-  width: 50%;
+  width: 50vw;
   height: auto;
 }
 
@@ -30,10 +58,33 @@
   height: auto;
 }
 
+.spaceDetailBtn {
+  border-radius: 5px;
+  background: #0fb6a8;
+  border: none;
+  width: 70%;
+  margin: 0 0 1vh 0;
+
+}
+
+.spaceDetailBtn:hover {
+  background: #D9EBE9;
+}
+
+.spaceDetailBtn a:hover {
+  color: #cdcdcd;
+}
+
+.spaceDetailBtn a {
+  text-decoration: none;
+  color: white;
+}
+
 .booked {
-  margin: 10px 0 15px 0;
+  margin: 0 0 15px 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .bookedMainTitle{
@@ -42,21 +93,24 @@
 }
 
 .bookedBox {
-  width: 30%;
-  margin: 0 0 0 10px;
+  width: 25vw;
+  margin: 15px 0 0 10px;
   border: #cdcdcd solid 0.2px;
   box-shadow: 1px 1px 5px #cdcdcd;
 }
 
 .bookedBox img {
   width: 100%;
-  height: 100px;
 }
 
 .bookedBoxTitle {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
   color: #484848;
+}
+
+.bookedBox h1 {
+  margin: 0 0 0 5px;
 }
 
 .bookedBox h2 {
@@ -80,5 +134,136 @@ height: 40px;
 width: 80%;
 border: #CDCDCD 1px solid;
 box-shadow: 1px 1px 6px #dddddd;
+text-indent: 10px;
 }
 
+.mapSpace {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  display: none;
+}
+
+.mapSpace img {
+}
+
+.spacesColRow {
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width:500px) and (max-width:650px) {
+  .spacesBox img {
+    width: 280px;
+    height: auto;
+  }
+
+
+}
+
+@media(min-width:651px) and (max-width:766px) {
+  .spacesBox img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media(min-width: 767px) and (max-width: 961px) {
+  .spacesColRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .spacesBox {
+    display: flex;
+    flex-direction: row;
+    width: 702px;
+    height: auto;
+    margin: 0 0 20px 0;
+    border: solid 1px #EDF5F4;
+  }
+  .spacesBox img {
+    width: 300px;
+    height: auto;
+  }
+  .mapSpace {
+    margin: 2vh 5vw 0 2vw;
+    display: initial;
+  }
+  .mapSpace img {
+    height: 1160px;
+  }
+  .cover {
+    width: 25vw;
+    object-fit: cover
+  }
+}
+
+@media (min-width: 962px) and (max-width:1024px) {
+  .spacesColRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .spacesBox {
+    display: flex;
+    flex-direction: row;
+    width: 702px;
+    height: auto;
+    margin: 0 0 20px 0;
+    border: solid 1px #EDF5F4;
+  }
+  .spacesBox img {
+    width: 300px;
+    height: auto;
+  }
+  .mapSpace {
+    height: auto;
+    margin: 2vh 5vw 0 2vw;
+    display: initial;
+  }
+  .mapSpace img {
+    height: 1160px;
+  }
+  .cover {
+    width: 35vw;
+    object-fit: cover
+  }
+}
+
+@media(min-width: 1025px) {
+  .spacesColRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .spacesBox {
+    display: flex;
+    flex-direction: row;
+    width: 702px;
+    height: auto;
+    margin: 0 0 20px 0;
+    border: solid 1px #EDF5F4;
+  }
+
+  .spacesBox img {
+    width: 300px;
+    height: auto;
+  }
+
+  .mapSpace {
+    height: auto;
+    margin: 2vh 5vw 0 2vw;
+    display: initial;
+  }
+
+  .mapSpace img {
+    height: 1160px;
+  }
+  .cover {
+    width: 50vw;
+    object-fit: cover
+  }
+}

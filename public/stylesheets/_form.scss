@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 90px;
 }
 
 #signup-form input {
@@ -19,7 +20,8 @@
   width: 80%;
   align-self: center;
   border-radius: 5px;
-  background: #42d187;
+  background:#0FB6A8;
   color: white;
   font-weight: bold;
+  border: none;
 }

@@ -1,4 +1,4 @@
-<div class='nav-bar'>
+{{!-- <div class='nav-bar'>
     <div class='logo'>
         <a href="/"><img class="logo" src="/images/spesu-logo.png" alt=""></a>
     </div>
@@ -11,5 +11,48 @@
         <a class="logIn" href="/auth/login">login</a>
         <a class="signUp" href="/auth/signup">Join Now</a>
         {{/if}}
+    </div>
+</div> --}}
+
+{{#if transparent}}
+<div id="nav-transparent">
+    <div class="navLogo">
+        <a href="/"><img class="logo" src="/images/spesu-logo.png" alt=""></a>
+    </div>
+</div>
+{{else}}
+<div id="nav">
+    <div class="navLogo">
+        <a href="/"><img class="logo" src="/images/spesu-logo.png" alt=""></a>
+    </div>
+</div>
+{{/if}}
+<div>
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+            <a href="/spaces">
+                <li>spaces</li>
+            </a>
+            <a href="/user">
+                <li>{{user.firstname}}</li>
+            </a>
+            {{#if user}}
+            <a href="/auth/logout">
+                <li>logout</li>
+            </a>
+            {{else}}
+            <a href="/auth/login">
+                <li>login</li>
+            </a>
+            <a href="/auth/signup">
+                <li>join now</li>
+            </a>
+            {{/if}}
+        </ul>
     </div>
 </div>

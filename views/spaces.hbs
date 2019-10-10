@@ -1,41 +1,44 @@
 {{!-- spaces.hbs --}}
 {{!-- shows booking if user with booking is logged in  --}}
-<div class="marginLR">
-
-  <form class="spaceMarginTop spaceSearchRow" action="/location" method="POST" class="indexForm">
-    <button class="spaceSearch" type="submit"><img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTueLhxCgdP_rTXRL0Wzi2vj92ECAJBR9E4TfVmnfoEGw1Czbk6"
-        alt=""></button>
-    <input class="spaceInput" type="text" name="location" placeholder="Search for your next office">
-  </form>
+<div class="marginLR spaceMarginTop">
 
   {{#if booked}}
   <h1 class="bookedMainTitle">Your Booked Spaces</h1>
   <div class="booked">
     {{#each booked}}
+    {{!-- <a href=""> --}}
     <div class="bookedBox">
-      <img src="{{this.space.image}}" alt="coffee shop">
+      <img class="cover" src="/{{this.space.image}}" alt="coffee shop">
       <h1 class="bookedBoxTitle">{{this.space.name}}</h1>
       <h2>{{this.bookingPeriod}}</h2>
     </div>
+    {{!-- </a> --}}
     {{/each}}
   </div>
   {{/if}}
+
+  <div class="spacesColRow">
+
+    {{!-- default aviable spaces for booking  --}}
+    <div class="spacesColumn">
+      {{#each space}}
+      <div class="spacesBox">
+        <img src="{{image}}" alt="coffee shop">
+        <div class="spacesBoxColumn marginLeft">
+          <div>
+            <h3>{{name}}</h3>
+            <p>Location: {{location}}</p>
+            <p>{{description}}</p>
+          </div>
+          <button class="spaceDetailBtn"><a href="/spaces/{{this._id}}">Details</a></button>
+        </div>
   
-  <div id='map' style='width: 400px; height: 300px;'></div>
-  {{!-- default aviable spaces for booking  --}}
-  <div id='check' class="spacesColumn">
-    {{#each space}}
-    <div class="spacesBox">
-      <img src="{{image}}" alt="coffee shop">
-      <div class="spaceColumn">
-        <h3>{{name}}</h3>
-        <p>Location: {{location}}</p>
-        <p>Description: {{description}}</p>
-        <button><a href="/spaces/{{this._id}}">Space Details</a></button>
-      </div>
+      {{/each}}
     </div>
-    {{/each}}
+    <div class="mapSpace">
+       <div id='map' style='width: 400px; height: 300px;'></div>
+    </div>
+
   </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"

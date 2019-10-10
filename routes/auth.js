@@ -2,16 +2,21 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const User = require("../models/user");
+var multer = require("multer");
+var upload = multer({ dest: `${__dirname}/../uploads/` });
+var Space = require("../models/space")
+var Booking = require("../models/booking")
 
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", (req, res, next) => {
+router.post("/signup", upload.single("userImage"), (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   const firstname = req.body.firstname;
   const lastname = req.body.lastname;
+  const image = req.file.filename;
   const bcryptSalt = 10;
   User.findOne({ username: username }).then(user => {
     if (user) {
@@ -25,7 +30,8 @@ router.post("/signup", (req, res, next) => {
             username: username,
             password: hash,
             firstname: firstname,
-            lastname: lastname
+            lastname: lastname,
+            image: image
           })
             .then(user => {
               console.log("user saved!");
@@ -63,7 +69,7 @@ router.post("/login", (req, res, next) => {
           } else {
             req.session.currentUser = user;
             console.log("you logged in!");
-            res.render("user-profile", { user: req.session.currentUser });
+            res.redirect("/spaces")
           }
         });
       }
