@@ -12,6 +12,8 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 // const passport = require("passport");
 // const FacebookStrategy = require("passport-facebook");
+global.access_token = process.env.MAP_BOX_API_KEY
+
 
 mongoose
   .connect("mongodb://localhost/spesu-project", {
@@ -34,6 +36,7 @@ const debug = require("debug")(
 
 const app = express();
 
+app.locals.MAP_BOX_API_KEY = process.env.MAP_BOX_API_KEY
 // Middleware Setup
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -104,6 +107,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 // Express View engine setup
 
 app.use('/', (req, res, next) => {
+  console.log(res.MAP_BOX_API_KEY)
   if (req.session.currentUser) {
     res.locals.user = req.session.currentUser;
   }
