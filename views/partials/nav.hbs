@@ -1,5 +1,6 @@
-{{!-- <div class='nav-bar'>
-    <div class='logo'>
+{{#if transparent}}
+<div id='navWide-transparent'>
+    <div class='navLogo'>
         <a href="/"><img class="logo" src="/images/spesu-logo.png" alt=""></a>
     </div>
     <div class='nav-login'>
@@ -12,7 +13,24 @@
         <a class="signUp" href="/auth/signup">Join Now</a>
         {{/if}}
     </div>
-</div> --}}
+</div>
+{{else}}
+<div id='navWide'>
+    <div class='navLogo'>
+        <a href="/"><img class="logo" src="/images/spesu-logo.png" alt=""></a>
+    </div>
+    <div class='nav-login'>
+        <a class="logIn" href="/spaces">spaces</a>
+        <a class="logIn" href="/user">{{user.firstname}}</a>
+        {{#if user}}
+        <a class="logIn" href="/auth/logout">logout</a>
+        {{else}}
+        <a class="logIn" href="/auth/login">login</a>
+        <a class="signUp" href="/auth/signup">Join Now</a>
+        {{/if}}
+    </div>
+</div>
+{{/if}}
 
 {{#if transparent}}
 <div id="nav-transparent">

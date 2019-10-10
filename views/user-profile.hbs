@@ -1,6 +1,3 @@
-<a href="">
-  <img class="profileEdit" src="https://cdn0.iconfinder.com/data/icons/facebook-ui-glyph/48/Sed-25-512.png">
-</a>
 <div class="profileColumn profileBackground">
   <div class="profileColumn1">
     <img class="profilePicture" src="/{{user.image}}" alt="image">
@@ -13,7 +10,7 @@
     <div class="profileBooked">
       {{#each booked}}
       <div class="profileBookedBox">
-        <img src="{{this.space.image}}" alt="coffee shop">
+        <img class="profileCover" src="{{this.space.image}}" alt="coffee shop">
         <div class="profileBookedColumn">
           <h2>{{this.space.name}}</h2>
           <h3>{{this.bookingPeriod}}</h2>
@@ -35,7 +32,7 @@
     <img src="/{{this.image}}" alt="cafe">
     <h2>{{this.name}}</h2>
     <h3>{{this.location}}</h3>
-    {{/each}}
   </div>
+  {{/each}}
 </div>
 {{/if}}
