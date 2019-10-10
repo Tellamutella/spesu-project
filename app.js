@@ -16,7 +16,7 @@ global.access_token = process.env.MAP_BOX_API_KEY
 
 
 mongoose
-  .connect("mongodb://localhost/spesu-project", {
+  .connect(process.env.DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -119,9 +119,5 @@ app.use('/', require('./routes/spaces'));
 app.use('/', require('./routes/users'));
 app.use('/',require('./routes/book'));
 app.use("/auth", require("./routes/auth"));
-
-app.listen(3000, () => {
-  console.log("listening 3000");
-});
 
 module.exports = app;
