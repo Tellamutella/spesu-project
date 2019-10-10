@@ -46,7 +46,6 @@ router.get("/spaces", (req, res) => {
           };
           newArr.push(check);
         });
-        console.log(newArr);
         res.render("spaces", { space, cord: JSON.stringify(newArr) });
       })
       .catch(err => {
@@ -67,7 +66,7 @@ router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
     .then(response => {
       Space.create({
         name: req.body.name,
-        location: req.body.location,
+        location: `${req.body.start}-${req.body.end}`,
         image: req.file.filename,
         description: req.body.description,
         owner: mongoose.Types.ObjectId(req.session.currentUser._id),

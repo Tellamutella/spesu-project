@@ -1,0 +1,52 @@
+.space-crreate-container{
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top:50px;
+  justify-content: center;
+  align-items: center;
+}
+
+#place-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+}
+
+.space-form-input{
+  border: 1px grey solid;
+  margin: 10px;
+  height: 40px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center;
+}
+
+#place-form select{
+  width: 80%;
+  margin: 5px;
+}
+
+#formSubmit{
+  height: 40px;
+  width: 80%;
+  align-self: center;
+  border-radius: 5px;
+  background:#0FB6A8;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.space-form-textarea{
+  border: 1px grey solid;
+  margin: 10px;
+  height: 100px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center;
+}

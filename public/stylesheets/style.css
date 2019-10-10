@@ -366,7 +366,7 @@ br {
   height: 40px;
   border-radius: 3px;
   text-indent: 10px;
-  width: 80%;
+  width: 400px;
   align-self: center; }
 
 #signup-form button {
@@ -374,10 +374,67 @@ br {
   width: 80%;
   align-self: center;
   border-radius: 5px;
-  background: #0FB6A8;
+  background: #0fb6a8;
   color: white;
   font-weight: bold;
   border: none; }
+
+#login {
+  display: flex;
+  width: 100vw;
+  height: 100wh;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 150px;
+  align-items: center; }
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: center; }
+
+#login-form input {
+  border: 1px grey solid;
+  margin: 10px;
+  height: 40px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center; }
+
+#login-form button {
+  height: 40px;
+  width: 80%;
+  align-self: center;
+  border-radius: 5px;
+  background: #0fb6a8;
+  color: white;
+  font-weight: bold;
+  border: none; }
+
+.signup-container {
+  display: flex;
+  display: flex;
+  width: 100vw;
+  height: 100wh;
+  justify-content: center; }
+
+#login img {
+  width: 220px;
+  margin: 10px 0px; }
+
+.testing-h2 {
+  width: 400px;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  opacity: 0.7; }
+
+.testing-span {
+  background: #fff;
+  padding: 0 10px; }
 
 #menu a {
   text-decoration: none;
@@ -513,7 +570,8 @@ br {
   background-color: #d1f2ee;
   position: fixed;
   top: 0;
-  display: none; }
+  display: none;
+  z-index: 1; }
 
 #navWide-transparent {
   width: 100%;
@@ -665,6 +723,15 @@ br {
   color: #484848;
   font-size: 1rem; }
 
+.yourSpaceBox h3 {
+  color: #484848;
+  font-size: 0.8rem; }
+
+@media (min-width: 500px) {
+  .profileBackground {
+    background: linear-gradient(#D1F2EE 220px, white 220px);
+    left: 0; } }
+
 .space-details-container {
   padding: 20px;
   margin-top: 80px; }
@@ -705,6 +772,53 @@ br {
     max-width: 30%; }
   #detail-map {
     height: 500px; } }
+
+.space-crreate-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center; }
+
+#place-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px; }
+
+.space-form-input {
+  border: 1px grey solid;
+  margin: 10px;
+  height: 40px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center; }
+
+#place-form select {
+  width: 80%;
+  margin: 5px; }
+
+#formSubmit {
+  height: 40px;
+  width: 80%;
+  align-self: center;
+  border-radius: 5px;
+  background: #0FB6A8;
+  color: white;
+  font-weight: bold;
+  border: none; }
+
+.space-form-textarea {
+  border: 1px grey solid;
+  margin: 10px;
+  height: 100px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center; }
 
 body {
   font: 14px Helvetica;
