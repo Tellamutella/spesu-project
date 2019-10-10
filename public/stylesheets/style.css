@@ -515,7 +515,6 @@ br {
   top: 0;
   display: none; }
 
-
 #navWide-transparent {
   width: 100%;
   height: 70px;
@@ -524,7 +523,7 @@ br {
   top: 0;
   display: none; }
 
-.logIn, .signUp {
+.logIn, .signUp, .logIn2 {
   font-size: 0.9rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -532,7 +531,7 @@ br {
   letter-spacing: 0.9px;
   margin-left: 10px; }
 
-.logIn {
+.logIn, .logIn2 {
   color: #0FB6A8;
   margin: 10px 10px 0 0; }
 
@@ -550,6 +549,9 @@ br {
 
 .logIn:hover {
   color: #484848; }
+
+.logIn2:hover {
+  color: white; }
 
 .signUp:hover {
   background-color: white;
@@ -577,6 +579,9 @@ br {
   display: flex;
   flex-direction: column; }
 
+.profileColumn1 {
+  align-items: center; }
+
 .profileColumn {
   align-items: center;
   height: auto;
@@ -589,7 +594,7 @@ br {
   color: #0FB6A8; }
 
 .profileBackground {
-  background: linear-gradient(#D1F2EE 30%, white 30%);
+  background: linear-gradient(#D1F2EE 20%, white 20%);
   left: 0; }
 
 .profileColumn1 img {
@@ -660,3 +665,72 @@ br {
   color: #484848;
   font-size: 1rem; }
 
+.yourSpaceBox h3 {
+  color: #484848;
+  font-size: 0.8rem; }
+
+@media (min-width: 500px) {
+  .profileBackground {
+    background: linear-gradient(#D1F2EE 220px, white 220px);
+    left: 0; } }
+
+.space-details-container {
+  padding: 20px;
+  margin-top: 80px; }
+
+.spaceDetails img {
+  width: 100%; }
+
+#detail-map {
+  width: 90vw;
+  height: 300px; }
+
+.space-detail-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  color: #000000;
+  opacity: 0.7; }
+
+@media (min-width: 961px) {
+  .spaceDetails img {
+    width: 70%; }
+  .spaceDetails {
+    display: flex; }
+  #detail-map {
+    height: 400px; }
+  .space-detail-info {
+    padding: 25px;
+    max-width: 25%; }
+  #detail-map {
+    margin: 20px 20px; } }
+
+@media (min-width: 1250px) {
+  .spaceDetails img {
+    width: 60%; }
+  .space-detail-info {
+    padding: 25px;
+    max-width: 30%; }
+  #detail-map {
+    height: 500px; } }
+
+body {
+  font: 14px Helvetica;
+  margin: 0 0; }
+
+a {
+  color: #00b7ff; }
+
+.marginLR {
+  margin: 0 4vw 0 4vw; }
+
+.marker {
+  background-image: url("/images/placeholder.png");
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

@@ -186,7 +186,7 @@
   display:none
 }
 
-.logIn, .signUp {
+.logIn, .signUp, .logIn2{
   font-size: 0.9rem;
   text-decoration: none;
   // color:#484848;
@@ -196,7 +196,7 @@
   margin-left: 10px;
 }
 
-.logIn {
+.logIn, .logIn2 {
   color: #0FB6A8;
   margin: 10px 10px 0 0;
 }
@@ -218,6 +218,9 @@
   color: #484848;
 }
 
+.logIn2:hover {
+  color: white;
+}
 .signUp:hover {
   background-color: white;
   color:#484848;

@@ -4,12 +4,12 @@
         <a href="/"><img class="logo" src="/images/spesu-logo.png" alt=""></a>
     </div>
     <div class='nav-login'>
-        <a class="logIn" href="/spaces">spaces</a>
-        <a class="logIn" href="/user">{{user.firstname}}</a>
+        <a class="logIn2" href="/spaces">spaces</a>
+        <a class="logIn2" href="/user">{{user.firstname}}</a>
         {{#if user}}
-        <a class="logIn" href="/auth/logout">logout</a>
+        <a class="logIn2" href="/auth/logout">logout</a>
         {{else}}
-        <a class="logIn" href="/auth/login">login</a>
+        <a class="logIn2" href="/auth/login">login</a>
         <a class="signUp" href="/auth/signup">Join Now</a>
         {{/if}}
     </div>
