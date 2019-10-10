@@ -69,7 +69,12 @@ router.post("/login", (req, res, next) => {
           } else {
             req.session.currentUser = user;
             console.log("you logged in!");
-            res.redirect("/spaces")
+            if (req.session.redirectUrl) {
+              res.redirect(req.session.redirectUrl)
+            }
+            else {
+              res.redirect("/spaces")
+            }
           }
         });
       }

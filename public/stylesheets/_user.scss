@@ -119,10 +119,12 @@
 }
 
 @media (min-width: 500px) {
-
   .profileBackground {
     background: linear-gradient(#D1F2EE 220px, white 220px);
     left: 0;
   }
 
+  .profilePicture {
+    width: 205px;
+  }
 }
