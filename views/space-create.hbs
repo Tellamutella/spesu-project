@@ -1,23 +1,52 @@
-<div class="spaceMarginTop">
+<div class="space-crreate-container">
   <form id="place-form" action="/spaces/create" method="POST" enctype="multipart/form-data">
     <h2>List your space</h2>
-    <input type="text" name="name" placeholder="Name of your space">
-
-    <select name="location">
-      <option>Amsterdam Centraal</option>
-      <option>Zuidas</option>
-      <option>Da Wallen</option>
-      <option>De Pijp</option>
-      <option>Oost</option>
+    <input class='space-form-input' type="text" name="name" placeholder="Name of your space">
+    <select name="start">
+      <option>7:00</option>
+      <option>8:00</option>
+      <option>9:00</option>
+      <option>10:00</option>
+      <option>11:00</option>
+      <option>12:00</option>
+      <option>13:00</option>
+      <option>14:00</option>
+      <option>15:00</option>
+      <option>16:00</option>
+      <option>17:00</option>
+      <option>18:00</option>
+      <option>19:00</option>
+      <option>20:00</option>
+      <option>21:00</option>
     </select>
-    <input type="text" name="description" placeholder="Descript your space">
+
+    <select name="end">
+      <option>7:00</option>
+      <option>8:00</option>
+      <option>9:00</option>
+      <option>10:00</option>
+      <option>11:00</option>
+      <option>12:00</option>
+      <option>13:00</option>
+      <option>14:00</option>
+      <option>15:00</option>
+      <option>16:00</option>
+      <option>17:00</option>
+      <option>18:00</option>
+      <option>19:00</option>
+      <option>20:00</option>
+      <option>21:00</option>
+    </select>
+    <label style="margin:15px 15px;">search for the address</label>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <textarea class='space-form-textarea' rows="4" cols="50" name='description'
+      placeholder="Descript your space"></textarea>
 
     <label>Upload an image of your space:</label>
-    <input type="file" name="spaceImage">
+    <input style="margin:15px 15px;" type="file" name="spaceImage">
     <input hidden type="text" name="id" value="{{user._id}}">
     <button id="formSubmit" type="submit">List Your Space</button>
   </form>
-  <div id='map' style='width: 400px; height: 300px;'></div>
 </div>
 
 <script>
