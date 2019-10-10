@@ -21,7 +21,7 @@
   margin-top: 27vh; }
 
 .indexColumn h1, p {
-  color: white; }
+  color: black; }
 
 .indexForm {
   width: 90vw;
@@ -57,6 +57,7 @@
   width: 90vw;
   border: #cdcdcd solid 0.2px; }
 
+.spacesBox img {
   width: 50%;
   height: auto; }
 
@@ -245,7 +246,22 @@
   flex-direction: column;
   text-align: center; }
 
+body {
+  font: 14px Helvetica;
+  margin: 0; }
+
 a {
   color: #00b7ff; }
+
+.marginLR {
+  margin: 0 4vw 0 4vw; }
+
+.marker {
+  background-image: url("/images/placeholder.png");
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

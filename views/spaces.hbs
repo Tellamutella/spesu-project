@@ -21,9 +21,10 @@
     {{/each}}
   </div>
   {{/if}}
-
+  
+  <div id='map' style='width: 400px; height: 300px;'></div>
   {{!-- default aviable spaces for booking  --}}
-  <div class="spacesColumn">
+  <div id='check' class="spacesColumn">
     {{#each space}}
     <div class="spacesBox">
       <img src="{{image}}" alt="coffee shop">
@@ -36,5 +37,26 @@
     </div>
     {{/each}}
   </div>
-
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+
+  var coordinatesArray = {{{ cord }}}
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWRkeTI3MDYiLCJhIjoiY2sxaTlyejFoMHQ2ejNocXBmdmVlb3MwNCJ9.kDpuAmvGKf_R2xvz66ZSnA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [4.76417, 52.3081],
+    zoom: 8
+  });
+
+  coordinatesArray.forEach((element) => {
+    var el = document.createElement('div');
+    el.className = 'marker';
+    new mapboxgl.Marker(el)
+      .setLngLat([element.long, element.lat])
+      .addTo(map);
+  })
+
+</script>
