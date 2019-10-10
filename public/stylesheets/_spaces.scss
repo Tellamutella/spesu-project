@@ -267,3 +267,8 @@ text-indent: 10px;
     object-fit: cover
   }
 }
+
+#map{
+  height: 100%;
+  z-index: -1;
+}

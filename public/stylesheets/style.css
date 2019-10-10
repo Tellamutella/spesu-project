@@ -20,6 +20,11 @@
   align-items: flex-start;
   margin-top: 27vh; }
 
+.indexTextColor {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 100; }
+
 .indexForm {
   width: 90vw;
   height: 15vh;
@@ -103,6 +108,9 @@ br {
   margin: 0 0 20px 0;
   border: solid 1px #EDF5F4; }
 
+.spacesBox img {
+  width: 50vw;
+  height: auto; }
 
 .spaceDetails {
   display: flex;
@@ -272,6 +280,10 @@ br {
   .cover {
     width: 50vw;
     object-fit: cover; } }
+
+#map {
+  height: 100%;
+  z-index: -1; }
 
 #signup-form {
   display: flex;
@@ -524,10 +536,6 @@ br {
 body {
   font: 14px Helvetica;
   margin: 0 0; }
-
-body {
-  font: 14px Helvetica;
-  margin: 0; }
 
 a {
   color: #00b7ff; }
