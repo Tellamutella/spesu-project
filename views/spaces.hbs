@@ -32,13 +32,13 @@
           </div>
           <button class="spaceDetailBtn"><a href="/spaces/{{this._id}}">Details</a></button>
         </div>
-        </div>
+      </div>
       {{/each}}
-  </div>
-  <div class="mapSpace">
-       <div id='map' class="cover"></div>
     </div>
-</div>
+    <div class="mapSpace">
+      <div id='map' class="cover"></div>
+    </div>
+  </div>
 </div>
 
 
@@ -48,7 +48,7 @@
 <script>
 
   var coordinatesArray = {{{ cord }}}
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZWRkeTI3MDYiLCJhIjoiY2sxaTlyejFoMHQ2ejNocXBmdmVlb3MwNCJ9.kDpuAmvGKf_R2xvz66ZSnA';
+  mapboxgl.accessToken = "{{{MAP_BOX_API_KEY}}}";
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
