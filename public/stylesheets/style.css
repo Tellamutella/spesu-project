@@ -112,16 +112,6 @@ br {
   width: 50vw;
   height: auto; }
 
-.spaceDetails {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 5vh; }
-
-.spaceDetails img {
-  width: 100%;
-  height: auto; }
-
 .spaceDetailBtn {
   border-radius: 5px;
   background: #0fb6a8;
@@ -282,8 +272,7 @@ br {
     object-fit: cover; } }
 
 #map {
-  height: 100%;
-  z-index: -1; }
+  height: 100%; }
 
 #signup-form {
   display: flex;
@@ -429,7 +418,8 @@ br {
   width: 100%;
   height: 70px;
   background-color: #d1f2ee;
-  position: fixed; }
+  position: fixed;
+  top: 0; }
 
 #nav-transparent {
   width: 100%;
@@ -532,6 +522,47 @@ br {
 .yourSpaceBox h3 {
   color: #484848;
   font-size: 0.8rem; }
+
+.space-details-container {
+  padding: 20px;
+  margin-top: 80px; }
+
+.spaceDetails img {
+  width: 100%; }
+
+#detail-map {
+  width: 90vw;
+  height: 300px; }
+
+.space-detail-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  color: #000000;
+  opacity: 0.7; }
+
+@media (min-width: 961px) {
+  .spaceDetails img {
+    width: 70%; }
+  .spaceDetails {
+    display: flex; }
+  #detail-map {
+    height: 400px; }
+  .space-detail-info {
+    padding: 25px;
+    max-width: 25%; }
+  #detail-map {
+    margin: 20px 20px; } }
+
+@media (min-width: 1250px) {
+  .spaceDetails img {
+    width: 60%; }
+  .space-detail-info {
+    padding: 25px;
+    max-width: 30%; }
+  #detail-map {
+    height: 500px; } }
 
 body {
   font: 14px Helvetica;

@@ -62,7 +62,7 @@ router.get("/spaces/create/", (req, res) => {
 router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
   axios
     .get(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/${req.body.address}.json?access_token=pk.eyJ1IjoiZWRkeTI3MDYiLCJhIjoiY2sxaTlyejFoMHQ2ejNocXBmdmVlb3MwNCJ9.kDpuAmvGKf_R2xvz66ZSnA&limit=1`
+      `https://api.mapbox.com/geocoding/v5/mapbox.places/${req.body.address}.json?access_token=${access_token}`
     )
     .then(response => {
       Space.create({
