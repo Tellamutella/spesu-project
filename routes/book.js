@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Booking = require('../models/booking')
 const mongoose = require("mongoose");
+const Space = require("../models/space")
 
 // router.get('/book/:spaceId', (req,res,next)=>{
 //   console.log(req.body.date)
@@ -16,13 +17,20 @@ const mongoose = require("mongoose");
 //   })
 
 router.post('/book', (req, res, next) => {
+
+  if (!req.session.currentUser) {
+    req.session.redirectUrl = `/spaces/${req.body.spaceId}`
+    res.redirect("auth/login");
+    return;
+  }
   const name = req.body.name
   const date = req.body.date
-  const description = req.body.description
   const location = req.body.location
   const id = req.body.spaceId
+  const image = req.body.image
+  const address = req.body.address
   console.log(date)
-  res.render('confirm', { name, date, description, location, id })
+  res.render('confirm', { name, date, location, id, image, address })
 })
 
 router.post('/book/confirm', (req, res, next) => {
@@ -33,7 +41,10 @@ router.post('/book/confirm', (req, res, next) => {
   })
     .then((Booking) => {
       console.log('booking saved')
-      res.redirect('/')
+      res.redirect('/spaces')
+    })
+    .catch((err) => {
+      res.send(err)
     })
 })
 
