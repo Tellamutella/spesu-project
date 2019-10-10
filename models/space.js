@@ -4,13 +4,13 @@ const Schema = mongoose.Schema
 const spaceSchema = new Schema(
   {
     name: {
-      type: String
-      // require: true
+      type: String,
+      require: true
     },
     owner: {
       type: mongoose.Types.ObjectId,
-      ref: "user"
-      // require: true
+      ref: "user",
+      require: true
     },
     // bookings: {
     //   type: mongoose.Types.ObjectId,
@@ -18,8 +18,8 @@ const spaceSchema = new Schema(
     //   // require: true
     // },
     location: {
-      type: String
-      // require: true
+      type: String,
+      require: true
     },
     // availability: {
     //   startDate: {
@@ -32,11 +32,12 @@ const spaceSchema = new Schema(
     //   }
     // },
     description: {
-      type: String
-      // require: true,
+      type: String,
+      require: true,
     },
     image: {
-      type: String
+      type: String,
+      require: true,
     }
   }
 )

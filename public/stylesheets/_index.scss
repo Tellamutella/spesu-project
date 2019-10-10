@@ -6,7 +6,7 @@
   z-index: -1;
 }
 
-.indexColumn {
+.coverBackground {
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url("https://i.pinimg.com/originals/29/20/dc/2920dc62d18471278ed6f9254a580c62.jpg");
   background-size: cover;
   background-blend-mode: darken;
@@ -20,13 +20,15 @@
 
 .indexColumn2 {
   width: 90vw; 
-  height: 60vh;
+  height: 80vh;
   align-items: flex-start;
   margin-top: 27vh;
 }
 
-.indexColumn h1, p {
+.indexTextColor {
   color: white;
+  font-size: 1.3rem;
+  font-weight: 100;
 }
 
 .indexForm {
@@ -43,6 +45,7 @@
   border-radius: 5px;
   color: white;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .indexInput {
@@ -50,4 +53,40 @@
   height: 5vh;
   border: #EDF5F4 solid 1px;
   border-radius: 5px;
+  text-indent: 10px;
+}
+
+.indexTitleColor{
+  font-size: 4rem;
+  color:  #0FB6A8;
+  margin: 20px 0 10px 0;
+  
+}
+
+.indexWhiteBack {
+  width: 100%;
+}
+
+.whySpesu h2 {
+  color: #484848;
+  font-size: 1.5rem;
+}
+
+.whySpesu h3 {
+
+}
+
+.whySpesu img {
+  width: 50px;
+}
+
+.whySpesu div {
+  max-width: 50vw;
+  display: flex;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+br {
+  color: #484848;
 }

@@ -14,7 +14,7 @@ router.get("/spaces", (req, res) => {
         Space.find({})
           .then(space => {
             debugger
-            res.render("spaces", { space:space,booked:bookin});
+            res.render("spaces", { space: space, booked: bookin });
           })
           .catch(err => {
             res.send(err);

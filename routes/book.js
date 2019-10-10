@@ -15,23 +15,23 @@ const mongoose = require("mongoose");
 //     })
 //   })
 
-router.post('/book', (req,res,next)=>{
+router.post('/book', (req, res, next) => {
   const name = req.body.name
   const date = req.body.date
   const description = req.body.description
   const location = req.body.location
   const id = req.body.spaceId
   console.log(date)
-  res.render('confirm',{name,date,description,location,id})
+  res.render('confirm', { name, date, description, location, id })
 })
 
-router.post('/book/confirm', (req,res,next)=>{
-    Booking.create({
-      space: mongoose.Types.ObjectId(req.body.spaceId),
-      tenant: mongoose.Types.ObjectId(req.session.currentUser._id),
-      bookingPeriod: req.body.date
-    })
-    .then((Booking)=>{
+router.post('/book/confirm', (req, res, next) => {
+  Booking.create({
+    space: mongoose.Types.ObjectId(req.body.spaceId),
+    tenant: mongoose.Types.ObjectId(req.session.currentUser._id),
+    bookingPeriod: req.body.date
+  })
+    .then((Booking) => {
       console.log('booking saved')
       res.redirect('/')
     })
