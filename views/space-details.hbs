@@ -1,20 +1,46 @@
 {{!-- space-details.hbs --}}
 
 <div class="spaceDetails">
-  <img src="{{space.image}}" alt="Cafe">
+  <img src="/{{space.image}}" alt="Cafe">
   <div>
     <h1>{{space.name}}</h1>
     <p>Location:{{space.location}}</p>
-    <p>Description: {{space.description}}</p>
-   </div>
- </div>
-    
+    <p id="long" data-coord={{space.long}}>Description: {{space.description}}</p>
+    <p id="lat" data-coord={{space.lat}}>address: {{space.address}}</p>
+  </div>
+</div>
+<div id='map' style='width: 400px; height: 300px;'></div>
 {{!-- passing info and selected date by the user to confirmation page as a form! --}}
-  <form action="/book" method="POST">
-    <input type="hidden" name='name' value="{{space.name}}">
-    <input type="hidden" name='location' value="{{space.location}}">
-    <input type="hidden" name='description' value="{{space.description}}">
-    <input type="hidden" name='spaceId' value="{{space._id}}">
-    <input type="date" name='date' id="date" value="2019-10-01" min="2013-01-01" max="2019-10-02">
-    <button type='sumbit'> click me</button>
-  </form>
+<form action="/book" method="POST">
+  <input type="hidden" name='name' value="{{space.name}}">
+  <input type="hidden" name='location' value="{{space.location}}">
+  <input type="hidden" name='description' value="{{space.description}}">
+  <input type="hidden" name='spaceId' value="{{space._id}}">
+  <input type="date" name='date' id="date" value="2019-10-01" min="2013-01-01" max="2019-10-02">
+  <button type='sumbit'> click me</button>
+</form>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+  let long  = $("#long").data().coord
+   let lat = $("#lat").data().coord
+   console.log(long , lat)
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWRkeTI3MDYiLCJhIjoiY2sxaTlyejFoMHQ2ejNocXBmdmVlb3MwNCJ9.kDpuAmvGKf_R2xvz66ZSnA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [long, lat],
+    zoom: 15
+  });
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat([long, lat])
+    .addTo(map);
+
+
+</script>

@@ -17,3 +17,12 @@ a {
 .marginLR {
   margin: 0 4vw 0 4vw;
 }
+
+.marker {
+  background-image: url('/images/placeholder.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}

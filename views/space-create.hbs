@@ -1,5 +1,5 @@
 <div class="spaceMarginTop">
-  <form action="/spaces/create" method="POST" enctype="multipart/form-data">
+  <form id="place-form" action="/spaces/create" method="POST" enctype="multipart/form-data">
     <h2>List your space</h2>
     <input type="text" name="name" placeholder="Name of your space">
 
@@ -10,13 +10,56 @@
       <option>De Pijp</option>
       <option>Oost</option>
     </select>
-
     <input type="text" name="description" placeholder="Descript your space">
 
     <label>Upload an image of your space:</label>
-
     <input type="file" name="spaceImage">
     <input hidden type="text" name="id" value="{{user._id}}">
     <button id="formSubmit" type="submit">List Your Space</button>
   </form>
+  <div id='map' style='width: 400px; height: 300px;'></div>
 </div>
+
+<script>
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWRkeTI3MDYiLCJhIjoiY2sxaTlyejFoMHQ2ejNocXBmdmVlb3MwNCJ9.kDpuAmvGKf_R2xvz66ZSnA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [4.84587, 52.342144],
+    zoom: 13
+  });
+
+  map.addControl(new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+  }));
+
+  var placeForm = document.getElementById("place-form")
+  placeForm.addEventListener("submit", function (e) {
+    e.preventDefault()
+    var formData = new FormData(placeForm)
+
+    var location = document.querySelector(".mapboxgl-ctrl-geocoder--input")
+    formData.append('address', location.value)
+
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/spaces/create',
+      data: formData,
+      config: { headers: { 'Content-Type': 'multipart/form-data' } }
+    })
+      .then(function (response) {
+        //handle success
+        debugger
+        window.location.href = `/spaces/${response.data.spaceId}`
+        console.log(response);
+      })
+      .catch(function (response) {
+        //handle error
+        debugger
+        console.log(response);
+      });
+  })
+
+</script>

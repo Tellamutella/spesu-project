@@ -16,13 +16,6 @@
     {{/each}}
   </div>
   {{/if}}
-  {{!-- 
-  <form class="spaceSearchRow" action="/location" method="POST" class="indexForm">
-    <button class="spaceSearch" type="submit"><img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTueLhxCgdP_rTXRL0Wzi2vj92ECAJBR9E4TfVmnfoEGw1Czbk6"
-        alt=""></button>
-    <input class="spaceInput" type="text" name="location" placeholder="Search for your next office">
-  </form> --}}
 
   <div class="spacesColRow">
 
@@ -39,13 +32,34 @@
           </div>
           <button class="spaceDetailBtn"><a href="/spaces/{{this._id}}">Details</a></button>
         </div>
-      </div>
+  
       {{/each}}
     </div>
     <div class="mapSpace">
-      <img class="cover" src="https://developers.google.com/maps/documentation/urls/images/map-no-params.png">
+       <div id='map' style='width: 400px; height: 300px;'></div>
     </div>
 
   </div>
-
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+
+  var coordinatesArray = {{{ cord }}}
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWRkeTI3MDYiLCJhIjoiY2sxaTlyejFoMHQ2ejNocXBmdmVlb3MwNCJ9.kDpuAmvGKf_R2xvz66ZSnA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [4.76417, 52.3081],
+    zoom: 8
+  });
+
+  coordinatesArray.forEach((element) => {
+    var el = document.createElement('div');
+    el.className = 'marker';
+    new mapboxgl.Marker(el)
+      .setLngLat([element.long, element.lat])
+      .addTo(map);
+  })
+
+</script>
