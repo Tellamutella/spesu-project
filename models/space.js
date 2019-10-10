@@ -21,6 +21,15 @@ const spaceSchema = new Schema(
       type: String
       // require: true
     },
+    address:{
+      type:String
+    },
+    long:{
+      type:Number
+    },
+    lat:{
+      type:Number
+    },
     // availability: {
     //   startDate: {
     //     type: Date
