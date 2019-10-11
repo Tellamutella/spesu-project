@@ -12,8 +12,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 // const passport = require("passport");
 // const FacebookStrategy = require("passport-facebook");
-global.access_token = process.env.MAP_BOX_API_KEY
-
+global.access_token = process.env.MAP_BOX_API_KEY;
 
 mongoose
   .connect(process.env.DB, {
@@ -36,9 +35,9 @@ const debug = require("debug")(
 
 const app = express();
 
-app.locals.MAP_BOX_API_KEY = process.env.MAP_BOX_API_KEY
+app.locals.MAP_BOX_API_KEY = process.env.MAP_BOX_API_KEY;
 
-app.locals.BASEURL = process.env.BASEURL
+app.locals.BASEURL = process.env.BASEURL;
 
 // Middleware Setup
 app.use(logger("dev"));
@@ -61,23 +60,25 @@ app.use(
 );
 
 // Express View engine setup
-app.use(require('node-sass-middleware')({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  sourceMap: true
-}));
+app.use(
+  require("node-sass-middleware")({
+    src: path.join(__dirname, "public"),
+    dest: path.join(__dirname, "public"),
+    sourceMap: true
+  })
+);
 
-app.use('/', (req, res, next) => {
+app.use("/", (req, res, next) => {
   if (req.session.currentUser) {
     res.locals.user = req.session.currentUser;
   }
   next();
-})
+});
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+app.use(express.static(path.join(__dirname, "public")));
+app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("uploads"));
 hbs.registerPartials(path.join(__dirname, "views/partials"));
@@ -109,21 +110,22 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 //   });
 // Express View engine setup
 
-app.use('/', (req, res, next) => {
-  console.log(res.MAP_BOX_API_KEY)
+app.use("/", (req, res, next) => {
+  console.log(res.MAP_BOX_API_KEY);
   if (req.session.currentUser) {
     res.locals.user = req.session.currentUser;
   }
   next();
-})
+});
 
-app.use('/', require('./routes/index'));
-app.use('/', require('./routes/spaces'));
-app.use('/', require('./routes/users'));
-app.use('/', require('./routes/book'));
+app.use("/", require("./routes/index"));
+app.use("/", require("./routes/spaces"));
+app.use("/", require("./routes/users"));
+app.use("/", require("./routes/book"));
 app.use("/auth", require("./routes/auth"));
-
 
 module.exports = app;
 
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+app.listen(3000, () =>
+  console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
+);
