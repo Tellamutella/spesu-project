@@ -31,6 +31,7 @@
             <p>Available: {{location}}</p>
             <p>{{description}}</p>
           </div>
+          <button class='view-map-btn'><a href='#map'>check me out</a></button>
           <button class="spaceDetailBtn"><a href="/spaces/{{this._id}}">Details</a></button>
         </div>
       </div>
@@ -45,7 +46,8 @@
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+  </script>
 <script>
 
   var coordinatesArray = {{{ cord }}}
@@ -54,14 +56,27 @@
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [4.76417, 52.3081],
-    zoom: 8
+    zoom: 9
   });
+
+  let checking = $('.view-map-btn')
+  checking.each((index, element) => {
+    element.addEventListener('click', () => {
+      let testCoord = coordinatesArray[index]
+      map.flyTo({ center: [testCoord.long, testCoord.lat], zoom: 15 })
+    });
+  })
+
 
   coordinatesArray.forEach((element) => {
     var el = document.createElement('div');
     el.className = 'marker';
+    var popup = new mapboxgl.Popup({ offset: 25 })
+      .setText(`Place: ${element.name}  Time:${element.time}`);
+
     new mapboxgl.Marker(el)
       .setLngLat([element.long, element.lat])
+      .setPopup(popup)
       .addTo(map);
   })
 

@@ -159,7 +159,7 @@ br {
   background: #D9EBE9; }
 
 .spaceDetailBtn a:hover {
-  color: #cdcdcd; }
+  color: #484848; }
 
 .spaceDetailBtn a {
   text-decoration: none;
@@ -235,6 +235,24 @@ br {
 .spacesColRow {
   display: flex;
   flex-direction: column; }
+
+.view-map-btn {
+  border-radius: 5px;
+  background: white;
+  border: #0fb6a8 1px solid;
+  height: 30px;
+  width: 150px;
+  margin: 0 0 1vh 0; }
+
+.view-map-btn a {
+  text-decoration: none;
+  color: #0fb6a8; }
+
+.view-map-btn:hover {
+  background: #0fb6a8; }
+
+.view-map-btn a:hover {
+  color: white; }
 
 @media (min-width: 500px) and (max-width: 650px) {
   .spacesBox img {
@@ -924,94 +942,10 @@ br {
 .confirmMainTitle {
   font-size: 1.5rem;
   color: #484848; }
-
-.paper span {
-  font-weight: bold; }
-
-.paper h3 {
-  font-size: 1.1rem;
-  color: #484848;
-  font-weight: 100; }
-
-.paper strong, p {
-  color: #484848; }
-
-.paper img {
-  width: 100%; }
-
-.confirmColRow {
-  display: flex;
-  flex-direction: column; }
-
-.confirmBtn {
-  border-radius: 5px;
-  color: white;
-  background: #0FB6A8;
-  padding: 5px 10px;
-  font-size: 1rem;
-  border: none; }
-
-.confirmBox {
-  margin: 0 0;
-  height: 25vh; }
-
-.confirmImg {
-  margin: 6vh 0; }
-
-@media (min-width: 767px) and (max-width: 961px) {
-  .confirmColRow {
-    flex-direction: row; }
-  .confirmBox {
-    margin: 5px 0;
-    width: 100vw; }
-  .confirmImg {
-    height: 50vh;
-    margin: 20px 0; }
-  .confirmCover {
-    width: 40vw;
-    object-fit: cover; } }
-
-@media (min-width: 768px) and (max-width: 1050px) {
-  .confirmColRow {
-    flex-direction: row; }
-  .confirmBox {
-    margin: 5px 0;
-    width: 100vw; }
-  .confirmImg {
-    height: 70vh;
-    margin: 20px 0; }
-  .confirmCover {
-    width: 40vw;
-    object-fit: cover; } }
-
-@media (min-width: 1051px) {
-  .confirmColRow {
-    flex-direction: row; }
-  .confirmBox {
-    margin: 5px 0;
-    min-width: 460px; }
-  .confirmImg {
-    height: 70vh;
-    margin: 20px 0; }
-  .confirmCover {
-    width: 40vw;
-    object-fit: cover; } }
-
-body {
-  font: 14px Helvetica;
-  margin: 0 0; }
-
-a {
-  color: #00b7ff; }
-
-.marginLR {
-  margin: 0 4vw 0 4vw; }
-
-.marker {
   background-image: url("/images/placeholder.png");
   background-size: cover;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer; }
 
