@@ -1,38 +1,43 @@
-<div class="profileColumn profileBackground">
+<div class="spaceMarginTop profileBackground">
   <div class="profileColumn1">
     <img class="profilePicture" src="/{{user.image}}" alt="image">
     <h1>{{user.firstname}} {{user.lastname}}</h1>
-  </div>
-  <div class="profileColumn1 marginLR">
 
-    {{#if booked}}
-    <h2 class="bookedMainTitle">Your Booked Spaces</h2>
-    <div class="profileBooked">
-      {{#each booked}}
-      <div class="profileBookedBox">
-        <img class="profileCover" src="{{this.space.image}}" alt="coffee shop">
-        <div class="profileBookedColumn">
-          <h2>{{this.space.name}}</h2>
-          <h3>{{this.bookingPeriod}}</h2>
+
+    <div class="profileColumn">
+      {{#if booked}}
+      <h2 class="bookedMainTitle">Your Booked Spaces</h2>
+      <div class="profileBooked">
+        {{#each booked}}
+        <div class="profileBookedBox">
+          <img class="profileCover" src="{{this.space.image}}" alt="coffee shop">
+          <div class="profileBookedColumn">
+            <h2>{{this.space.name}}</h2>
+            <h3>{{this.bookingPeriod}}</h2>
+              <h3>{{this.location}}</h3>
+          </div>
         </div>
+        {{/each}}
       </div>
-      {{/each}}
+      {{/if}}
     </div>
-    {{/if}}
+
+    {{!-- <button class="proButtons"><a href=>Manage your bookings</a></button> --}}
+    <button class="proButtons"><a href="/spaces/create">List your space</a></button>
   </div>
-  {{!-- <button class="proButtons"><a href=>Manage your bookings</a></button> --}}
-  <button class="proButtons"><a href="/spaces/create">List your space</a></button>
 </div>
 
 {{#if space}}
 <div class="marginLR">
   <h2 class="bookedMainTitle">Your listed spaces</h2>
-  {{#each space}}
-  <div class="yourSpaceBox">
-    <img src="/{{this.image}}" alt="cafe">
-    <h2>{{this.name}}</h2>
-    <h3>{{this.location}}</h3>
+  <div class="yourSpaceColRow">
+    {{#each space}}
+    <div class="yourSpaceBox">
+      <img src="/{{this.image}}" alt="cafe">
+      <h2>{{this.name}}</h2>
+      <h3>{{this.location}}</h3>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
 </div>
 {{/if}}
