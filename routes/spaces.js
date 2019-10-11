@@ -84,7 +84,10 @@ router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
         .catch(err => {
           res.send(err);
         });
-    });
+    })
+    .catch(err=>{
+      res.send(err);
+    })
 });
 
 router.get("/spaces/:spaceId", (req, res) => {
