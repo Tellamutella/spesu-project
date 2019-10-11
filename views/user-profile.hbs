@@ -1,6 +1,6 @@
 <div class="spaceMarginTop profileBackground">
   <div class="profileColumn1">
-    <img class="profilePicture" src="/{{user.image}}" alt="image">
+    <img class="profilePicture" src="{{user.image}}" alt="image">
     <h1 class="profileName">{{user.firstname}} {{user.lastname}}</h1>
 
 
@@ -35,7 +35,7 @@
   <div class="yourSpaceColRow">
     {{#each space}}
     <div class="yourSpaceBox">
-      <img src="/{{this.image}}" alt="cafe">
+      <img src='{{this.image}}' alt="cafe">
       <h2>{{this.name}}</h2>
       <h3>{{this.location}}</h3>
     </div>
