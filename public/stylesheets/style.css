@@ -642,11 +642,9 @@ br {
   align-items: center; }
 
 .profileColumn {
-  align-items: center;
   height: auto;
-  width: 100vw;
-  justify-content: space-evenly;
-  padding-top: 90px; }
+  width: 90vw;
+  justify-content: space-evenly; }
 
 .profileColumn h1 {
   text-transform: uppercase;
@@ -654,7 +652,7 @@ br {
 
 .profileBackground {
   background: linear-gradient(#D1F2EE 20%, white 20%);
-  left: 0; }
+  width: 100%; }
 
 .profileColumn1 img {
   margin: 0 2vw; }
@@ -662,13 +660,13 @@ br {
 .proButtons {
   border: #EDF5F4 solid 1px;
   border-radius: 20px;
-  width: 70vw;
-  height: 10vw;
+  width: 360px;
+  height: 52px;
   background: #0FB6A8;
   margin: 0 2vw; }
 
 .proButtons a {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
@@ -712,20 +710,6 @@ br {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
   color: #484848; }
-
-.yourSpaceBox {
-  width: 30%;
-  box-shadow: 1px 1px 5px #cdcdcd; }
-
-.yourSpaceBox img {
-  width: 100%; }
-
-.yourSpaceBox h2 {
-  color: #484848;
-  font-size: 1rem; }
-
-.yourSpaceBox h3 {
-  color: #484848;
 
 
 body {

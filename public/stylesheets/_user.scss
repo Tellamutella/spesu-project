@@ -14,11 +14,9 @@
   align-items: center;
 }
 .profileColumn {
-  align-items: center;
   height: auto;
-  width: 100vw;
+  width: 90vw;
   justify-content: space-evenly;
-  padding-top: 90px;
 }
 
 
@@ -29,7 +27,7 @@
 
 .profileBackground {
   background: linear-gradient(#D1F2EE 20%, white 20%);
-  left: 0;
+  width: 100%
 }
 
 .profileColumn1 img {
@@ -39,14 +37,14 @@
 .proButtons {
   border: #EDF5F4 solid 1px;
   border-radius: 20px;;
-  width: 70vw;
-  height: 10vw;
+  width: 360px;
+  height: 52px;
   background: #0FB6A8;
   margin: 0 2vw;
 }
 
 .proButtons a {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
@@ -100,8 +98,9 @@
 }
 
 .yourSpaceBox {
-  width: 30%;
-  box-shadow: 1px 1px 5px #cdcdcd;
+  width: 45%;
+  box-shadow: 1px 1px 5px #EDF5F4;
+  margin: 0 0 15px 0;
 }
 
 .yourSpaceBox img {
@@ -118,6 +117,13 @@
   font-size: 0.8rem;
 }
 
+.yourSpaceColRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 @media (min-width: 500px) {
   .profileBackground {
     background: linear-gradient(#D1F2EE 220px, white 220px);
@@ -126,5 +132,47 @@
 
   .profilePicture {
     width: 205px;
+  }
+}
+
+@media (min-width: 651px) {
+  .profileBooked {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .profileBookedBox img {
+    height: 120px;
+  }
+  .profileCover {
+    width: 100%;
+  }
+}
+
+@media (min-width: 651px) and (max-width:767px) {
+
+.profileBookedBox {
+  width: 28%;
+  height: 20vh;
+  margin: 0 2px 10px 14px;
+  flex-direction: column;
+}
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .profileBookedBox {
+    width: 20vw;
+    height: 170px;
+    margin: 0 2px 10px 14px;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) {
+  .profileBookedBox {
+    width: 179px;
+    height: 170px;
+    margin: 0 2px 10px 14px;
+    flex-direction: column;
   }
 }
