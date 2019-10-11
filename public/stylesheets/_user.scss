@@ -1,10 +1,18 @@
 
 .profilePicture {
   border-radius: 50%;
-  width: 40vw;
+  width: 205px;
+  height: 205px;
   border: #EDF5F4 solid 2px;
+  object-fit: cover;
 }
 
+.profileName {
+  color: #484848;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 10px 0 15px 0;
+}
 .profileColumn, .profileColumn1 {
   display: flex;
   flex-direction: column;
@@ -59,6 +67,9 @@
   width: 90vw;
 }
 
+.profileBookedAddress {
+  display: none;
+}
 .profileBookedBox {
   width: 100%;
   margin: 0 0 10px 0;
@@ -86,15 +97,17 @@
 }
 
 .profileBookedBox h2 {
-  font-size: 1rem;
-  margin: 0 0 0 5px;
-  color: #484848;
-}
-
-.profileBookedBox h3 {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
   color: #484848;
+  padding: 8px 0 0 0;
+}
+
+.profileBookedBox h3 {
+  font-size: 0.7rem;
+  margin: 0 0 0 5px;
+  color: #484848;
+  font-weight: 500;
 }
 
 .yourSpaceBox {
@@ -105,25 +118,54 @@
 
 .yourSpaceBox img {
   width: 100%;
+  height: 70%;
 }
 
 .yourSpaceBox h2 {
   color: #484848;
   font-size: 1rem;
+  margin: 1vh 0 0 10px;
 }
 
 .yourSpaceBox h3 {
   color: #484848;
   font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1vh 0 0 10px;
 }
 
 .yourSpaceColRow {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 15px;
 }
 
+.profileShowText {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay {
+  position: relative;
+  height: 20vh;
+  width: 20vw;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #D1F2EE;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
 @media (min-width: 500px) {
   .profileBackground {
     background: linear-gradient(#D1F2EE 220px, white 220px);
@@ -146,6 +188,10 @@
   }
   .profileCover {
     width: 100%;
+  }
+
+  .profileBookedAddress {
+    display: initial;
   }
 }
 

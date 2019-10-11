@@ -177,7 +177,8 @@ br {
   margin: 15px 5px 0 5px;
   border: #cdcdcd solid 0.2px;
   box-shadow: 1px 1px 5px #cdcdcd;
-  border-radius: 2px; }
+  border-radius: 2px;
+  padding: 0 0 4px 0; }
 
 .bookedMainTitle {
   font-size: 1.2rem;
@@ -185,12 +186,21 @@ br {
 
 .bookedBox img {
   width: 100%;
+  height: 110px;
   border-radius: 2px; }
+
+.bookedBox h2 {
+  font-size: 1rem; }
+
+.cover {
+  width: 92vw;
+  object-fit: cover; }
 
 .bookedBoxTitle {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
-  color: #484848; }
+  color: #484848;
+  padding: 5px 0 2px 0; }
 
 .bookedBox h1 {
   margin: 0 0 0 5px; }
@@ -247,7 +257,12 @@ br {
 @media (min-width: 500px) and (max-width: 650px) {
   .spacesBox img {
     width: 280px;
-    height: auto; } }
+    height: auto; }
+  .bookedBox {
+    width: 28vw;
+    margin: 15px 5px 0 5px;
+    border: #cdcdcd solid 0.2px;
+    box-shadow: 1px 1px 5px #cdcdcd; } }
 
 @media (min-width: 651px) and (max-width: 766px) {
   .spacesBox img {
@@ -624,10 +639,12 @@ br {
   margin: 20px 20px 0 0; }
 
 .logIn:hover {
-  color: #484848; }
+  color: #484848;
+  transition: 0.2s; }
 
 .logIn2:hover {
-  color: white; }
+  color: white;
+  transition: 0.2s; }
 
 .signUp:hover {
   background-color: white;
@@ -648,8 +665,16 @@ br {
 
 .profilePicture {
   border-radius: 50%;
-  width: 40vw;
-  border: #EDF5F4 solid 2px; }
+  width: 205px;
+  height: 205px;
+  border: #EDF5F4 solid 2px;
+  object-fit: cover; }
+
+.profileName {
+  color: #484848;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 10px 0 15px 0; }
 
 .profileColumn, .profileColumn1 {
   display: flex;
@@ -696,6 +721,9 @@ br {
   justify-content: center;
   width: 90vw; }
 
+.profileBookedAddress {
+  display: none; }
+
 .profileBookedBox {
   width: 100%;
   margin: 0 0 10px 0;
@@ -719,15 +747,201 @@ br {
   justify-content: space-evenly; }
 
 .profileBookedBox h2 {
-  font-size: 1rem;
-  margin: 0 0 0 5px;
-  color: #484848; }
-
-.profileBookedBox h3 {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
+  color: #484848;
+  padding: 8px 0 0 0; }
+
+.profileBookedBox h3 {
+  font-size: 0.7rem;
+  margin: 0 0 0 5px;
+  color: #484848;
+  font-weight: 500; }
+
+.yourSpaceBox {
+  width: 45%;
+  box-shadow: 1px 1px 5px #EDF5F4;
+  margin: 0 0 15px 0; }
+
+.yourSpaceBox img {
+  width: 100%;
+  height: 70%; }
+
+.yourSpaceBox h2 {
+  color: #484848;
+  font-size: 1rem;
+  margin: 1vh 0 0 10px; }
+
+.yourSpaceBox h3 {
+  color: #484848;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1vh 0 0 10px; }
+
+.yourSpaceColRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 15px; }
+
+.profileShowText {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.overlay {
+  position: relative;
+  height: 20vh;
+  width: 20vw;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #D1F2EE; }
+
+.overlay:hover {
+  opacity: 1; }
+
+@media (min-width: 500px) {
+  .profileBackground {
+    background: linear-gradient(#D1F2EE 220px, white 220px);
+    left: 0; }
+  .profilePicture {
+    width: 205px; } }
+
+@media (min-width: 651px) {
+  .profileBooked {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+  .profileBookedBox img {
+    height: 120px; }
+  .profileCover {
+    width: 100%; }
+  .profileBookedAddress {
+    display: initial; } }
+
+@media (min-width: 651px) and (max-width: 767px) {
+  .profileBookedBox {
+    width: 28%;
+    height: 20vh;
+    margin: 0 2px 10px 14px;
+    flex-direction: column; } }
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .profileBookedBox {
+    width: 20vw;
+    height: 170px;
+    margin: 0 2px 10px 14px;
+    flex-direction: column; } }
+
+@media (min-width: 900px) {
+  .profileBookedBox {
+    width: 179px;
+    height: 170px;
+    margin: 0 2px 10px 14px;
+    flex-direction: column; } }
+
+.space-details-container {
+  padding: 20px;
+  margin-top: 80px; }
+
+.spaceDetails img {
+  width: 100%; }
+
+#detail-map {
+  width: 90vw;
+  height: 300px; }
+
+.space-detail-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  color: #000000;
+  opacity: 0.7; }
+
+@media (min-width: 961px) {
+  .spaceDetails img {
+    width: 70%; }
+  .spaceDetails {
+    display: flex; }
+  #detail-map {
+    height: 400px; }
+  .space-detail-info {
+    padding: 25px;
+    max-width: 25%; }
+  #detail-map {
+    margin: 20px 20px; } }
+
+@media (min-width: 1250px) {
+  .spaceDetails img {
+    width: 60%; }
+  .space-detail-info {
+    padding: 25px;
+    max-width: 30%; }
+  #detail-map {
+    height: 500px; } }
+
+.space-crreate-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center; }
+
+#place-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px; }
+
+.space-form-input {
+  border: 1px grey solid;
+  margin: 10px;
+  height: 40px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center; }
+
+#place-form select {
+  width: 80%;
+  margin: 5px; }
+
+#formSubmit {
+  height: 40px;
+  width: 80%;
+  align-self: center;
+  border-radius: 5px;
+  background: #0FB6A8;
+  color: white;
+  font-weight: bold;
+  border: none; }
+
+.space-form-textarea {
+  border: 1px grey solid;
+  margin: 10px;
+  height: 100px;
+  border-radius: 3px;
+  text-indent: 10px;
+  width: 80%;
+  align-self: center; }
+
+.paper {
+  border-top: 1px solid #D9EBE9;
+  margin-top: 10px; }
+
+.confirmMainTitle {
+  font-size: 1.5rem;
   color: #484848; }
-.marker {
   background-image: url("/images/placeholder.png");
   background-size: cover;
   width: 30px;

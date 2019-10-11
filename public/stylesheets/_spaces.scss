@@ -84,6 +84,7 @@
   border: #cdcdcd solid 0.2px;
   box-shadow: 1px 1px 5px #cdcdcd;
   border-radius: 2px;
+  padding: 0 0 4px 0;
 }
 
 .bookedMainTitle{
@@ -93,13 +94,24 @@
 
 .bookedBox img {
   width: 100%;
+  height: 110px;
   border-radius: 2px;
+}
+
+.bookedBox h2 {
+  font-size: 1rem;
+}
+
+.cover {
+  width: 92vw;
+  object-fit: cover
 }
 
 .bookedBoxTitle {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
   color: #484848;
+  padding: 5px 0 2px 0;
 }
 
 .bookedBox h1 {
@@ -172,7 +184,12 @@ text-indent: 10px;
     width: 280px;
     height: auto;
   }
-
+  .bookedBox{
+    width: 28vw;
+    margin: 15px 5px 0 5px;
+    border: #cdcdcd solid 0.2px;
+    box-shadow: 1px 1px 5px #cdcdcd;
+  }
 
 }
 

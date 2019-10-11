@@ -1,7 +1,7 @@
 <div class="spaceMarginTop profileBackground">
   <div class="profileColumn1">
     <img class="profilePicture" src="/{{user.image}}" alt="image">
-    <h1>{{user.firstname}} {{user.lastname}}</h1>
+    <h1 class="profileName">{{user.firstname}} {{user.lastname}}</h1>
 
 
     <div class="profileColumn">
@@ -13,8 +13,10 @@
           <img class="profileCover" src="{{this.space.image}}" alt="coffee shop">
           <div class="profileBookedColumn">
             <h2>{{this.space.name}}</h2>
-            <h3>{{this.bookingPeriod}}</h2>
-              <h3>{{this.location}}</h3>
+            <h3>{{this.bookingPeriod}}, {{this.space.location}}</h2>
+              <div class="overlay">
+                <h3 class="profileShowText"><strong>Address:</strong> {{this.space.address}}</h3>
+              </div>
           </div>
         </div>
         {{/each}}
