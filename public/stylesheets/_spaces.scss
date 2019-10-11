@@ -1,7 +1,6 @@
 .spaceMarginTop {
   padding-top: 80px;
 }
-
 .spaceMarginTop h1{
   margin: 10px 0 0 0;
 }
@@ -10,7 +9,6 @@
   flex-direction: column;
   margin-top: 20px;
 }
-
 .spacesBoxColumn {
   display: flex;
   flex-direction: column;
@@ -19,20 +17,16 @@
   width: 100%;
   color: #484848;
 }
-
 .marginLeft {
   margin: 0 0 0 15px;
 }
-
 .spacesBox  p, button {
   margin: 2px 0;
 }
-
 .spacesBox h3 {
   margin: 1vh 0 1vh 0;
   font-size: 1.2rem;
 }
-
 .spacesBox {
   display: flex;
   flex-direction: row;
@@ -41,12 +35,10 @@
   margin: 0 0 20px 0;
   border: solid 1px #EDF5F4;
 }
-
 .spacesBox img {
   width: 50vw;
   height: auto;
 }
-
 .spaceDetailBtn {
   border-radius: 5px;
   background: #0fb6a8;
@@ -54,22 +46,17 @@
   height: 30px;
   width: 150px;
   margin: 0 0 1vh 0;
-
 }
-
 .spaceDetailBtn:hover {
   background: #D9EBE9;
 }
-
 .spaceDetailBtn a:hover {
   color: #484848;
 }
-
 .spaceDetailBtn a {
   text-decoration: none;
   color: white;
 }
-
 .booked {
   margin: 0 0 15px 0;
   display: flex;
@@ -77,59 +64,39 @@
   flex-wrap: wrap;
   justify-content: start;
 }
-
 .bookedBox {
   width: 28vw;
   margin: 15px 5px 0 5px;
   border: #cdcdcd solid 0.2px;
   box-shadow: 1px 1px 5px #cdcdcd;
   border-radius: 2px;
-  padding: 0 0 4px 0;
 }
-
 .bookedMainTitle{
   font-size: 1.2rem;
   color: #484848;
 }
-
 .bookedBox img {
   width: 100%;
-  height: 110px;
   border-radius: 2px;
 }
-
-.bookedBox h2 {
-  font-size: 1rem;
-}
-
-.cover {
-  width: 92vw;
-  object-fit: cover
-}
-
 .bookedBoxTitle {
   font-size: 0.8rem;
   margin: 0 0 0 5px;
   color: #484848;
-  padding: 5px 0 2px 0;
 }
-
 .bookedBox h1 {
   margin: 0 0 0 5px;
 }
-
 .bookedBox h2 {
   font-size: 0.5rem;
   margin: 0 0 5px 5px;
   color: #484848;
 }
-
 .spaceSearchRow {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
 .spaceSearch img {
   width: 30px;
   height: 30px;
@@ -141,22 +108,18 @@ border: #CDCDCD 1px solid;
 box-shadow: 1px 1px 6px #dddddd;
 text-indent: 10px;
 }
-
 .mapSpace {
   width: 100%;
   height: auto;
   margin-top: 0;
   display: none;
 }
-
 .mapSpace img {
 }
-
 .spacesColRow {
   display: flex;
   flex-direction: column;
 }
-
 .view-map-btn {
   border-radius: 5px;
   background: white;
@@ -165,34 +128,22 @@ text-indent: 10px;
   width: 150px;
   margin: 0 0 1vh 0;
 }
-
 .view-map-btn a {
   text-decoration: none;
   color:#0fb6a8;
 }
-
 .view-map-btn:hover {
   background: #0fb6a8;
 }
-
 .view-map-btn a:hover {
   color: white;
 }
-
 @media(min-width:500px) and (max-width:650px) {
   .spacesBox img {
     width: 280px;
     height: auto;
   }
-  .bookedBox{
-    width: 28vw;
-    margin: 15px 5px 0 5px;
-    border: #cdcdcd solid 0.2px;
-    box-shadow: 1px 1px 5px #cdcdcd;
-  }
-
 }
-
 @media(min-width:651px) and (max-width:766px) {
   .spacesBox img {
     width: 300px;
@@ -213,14 +164,12 @@ text-indent: 10px;
     box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
-
 @media(min-width: 767px) and (max-width: 961px) {
   .spacesColRow {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
-
   .spacesBox {
     display: flex;
     flex-direction: row;
@@ -242,7 +191,6 @@ text-indent: 10px;
     width: 92vw;
     object-fit: cover
   }
-
   .booked {
     margin: 0 0 15px 0;
     display: flex;
@@ -258,8 +206,6 @@ text-indent: 10px;
     box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
-
-
 @media (min-width: 962px) and (max-width:1024px) {
   .spacesColRow {
     display: flex;
@@ -302,7 +248,6 @@ text-indent: 10px;
     box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
-
 @media(min-width: 1025px) {
   .spacesColRow {
     display: flex;
@@ -318,18 +263,16 @@ text-indent: 10px;
     margin: 0 0 20px 0;
     border: solid 1px #EDF5F4;
   }
-
   .spacesBox img {
     width: 300px;
     height: auto;
   }
-
   .mapSpace {
-    height: auto;
+    height: 700px;
     margin: 2vh 5vw 0 2vw;
     display: initial;
+    left: 50vw;
   }
-
   .mapSpace img {
     height: 1160px;
   }
@@ -337,7 +280,6 @@ text-indent: 10px;
     width: 50vw;
     object-fit: cover
   }
-
   .booked {
     margin: 0 0 15px 0;
     display: flex;
@@ -353,7 +295,6 @@ text-indent: 10px;
     box-shadow: 1px 1px 5px #cdcdcd;
   }
 }
-
 #map{
   height: 100%;
 }
