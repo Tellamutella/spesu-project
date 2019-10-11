@@ -29,10 +29,10 @@
 #login {
   display: flex;
   width: 100vw;
-  height: 100wh;
+  height: 70vh;
   justify-content: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 63px;
   align-items: center;
 }
 
@@ -69,13 +69,16 @@
   display: flex;
   display: flex;
   width: 100vw;
-  height: 100wh;
+  height: 73vh;
   justify-content: center;
+  margin-top: 40px
+
 }
 
 #login img{
   width: 220px;
   margin:10px 0px;
+
 }
 
 .testing-h2 { 

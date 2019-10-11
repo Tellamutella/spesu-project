@@ -107,7 +107,9 @@ br {
   .indexColRow {
     flex-direction: row;
   }
+}
 
+@media (min-width:767px) and (max-width: 1199px) {
   .searchColRow {
     display: flex;
     flex-direction: row;
@@ -115,6 +117,7 @@ br {
     justify-content: space-evenly;
     width: 90vw;
   }
+
   .indexForm {
     width:60vw;
   }
@@ -122,6 +125,7 @@ br {
   .indexInput {
     width: 60vw;
   }
+
   .indexButton {
     width: 25vw;
   }
@@ -137,4 +141,28 @@ br {
   .indexColumn2 {
     margin: 27vh 30vw 0 30vw;
   }
+}
+
+@media (min-width: 1200px) {
+
+  .searchColRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90vw;
+  }
+
+  .indexForm {
+    width: 40vw;
+  }
+
+  .indexInput {
+    width: 35vw;
+  }
+
+  .indexButton {
+    width: 15vw;
+  }
+
 }
