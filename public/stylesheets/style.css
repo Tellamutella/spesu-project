@@ -159,7 +159,7 @@ br {
   background: #D9EBE9; }
 
 .spaceDetailBtn a:hover {
-  color: #cdcdcd; }
+  color: #484848; }
 
 .spaceDetailBtn a {
   text-decoration: none;
@@ -225,6 +225,24 @@ br {
 .spacesColRow {
   display: flex;
   flex-direction: column; }
+
+.view-map-btn {
+  border-radius: 5px;
+  background: white;
+  border: #0fb6a8 1px solid;
+  height: 30px;
+  width: 150px;
+  margin: 0 0 1vh 0; }
+
+.view-map-btn a {
+  text-decoration: none;
+  color: #0fb6a8; }
+
+.view-map-btn:hover {
+  background: #0fb6a8; }
+
+.view-map-btn a:hover {
+  color: white; }
 
 @media (min-width: 500px) and (max-width: 650px) {
   .spacesBox img {
@@ -915,8 +933,8 @@ a {
 .marker {
   background-image: url("/images/placeholder.png");
   background-size: cover;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer; }
 
