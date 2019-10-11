@@ -17,6 +17,7 @@ router.get("/spaces", (req, res) => {
             newArr = [];
             space.forEach(element => {
               let check = {
+                name: element.name,
                 long: element.long,
                 lat: element.lat
               };
@@ -41,6 +42,8 @@ router.get("/spaces", (req, res) => {
         newArr = [];
         space.forEach(element => {
           let check = {
+            name: element.name,
+            time: element.location,
             long: element.long,
             lat: element.lat
           };
