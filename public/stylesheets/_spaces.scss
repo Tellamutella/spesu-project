@@ -25,7 +25,12 @@
 }
 .spacesBox h3 {
   margin: 1vh 0 1vh 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.spacesBox p {
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 .spacesBox {
   display: flex;
@@ -36,8 +41,13 @@
   border: solid 1px #EDF5F4;
 }
 .spacesBox img {
-  width: 50vw;
-  height: auto;
+  width: 40vw;
+  height: 180px;
+}
+
+.spacesBoxCover {
+  width: 40vw;
+  object-fit: cover;
 }
 .spaceDetailBtn {
   border-radius: 5px;
@@ -46,12 +56,14 @@
   height: 30px;
   width: 150px;
   margin: 0 0 1vh 0;
+  color: white;
 }
 .spaceDetailBtn:hover {
   background: #D9EBE9;
+  color:  #0fb6a8;
 }
 .spaceDetailBtn a:hover {
-  color: #484848;
+  color:  #0fb6a8;
 }
 .spaceDetailBtn a {
   text-decoration: none;

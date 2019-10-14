@@ -21,6 +21,9 @@
   align-items: flex-start;
   margin-top: 27vh; }
 
+.indexColumn h2 {
+  color: #484848; }
+
 .indexTextColor {
   color: white;
   font-size: 1.3rem;
@@ -34,6 +37,9 @@
 .indexWhiteBack {
   width: 100%; }
 
+.whySpesu {
+  width: 90vw; }
+
 .whySpesu h2 {
   color: #484848;
   font-size: 1.5rem; }
@@ -46,6 +52,9 @@
   display: flex;
   text-align: center;
   margin-bottom: 10px; }
+
+.whySpesuHeight {
+  margin: 10vh 0 10vh 0; }
 
 br {
   color: #484848; }
@@ -82,9 +91,18 @@ br {
   border-radius: 5px;
   text-indent: 10px; }
 
+.indexBox {
+  max-width: 200px; }
+
+.whySpesuWidth h3 {
+  color: #484848; }
+
 @media (min-width: 767px) {
   .indexColRow {
-    flex-direction: row; } }
+    flex-direction: row;
+    justify-content: space-between; }
+  .whySpesuWidth {
+    width: 270px; } }
 
 @media (min-width: 767px) and (max-width: 1199px) {
   .searchColRow {
@@ -120,7 +138,9 @@ br {
   .indexInput {
     width: 35vw; }
   .indexButton {
-    width: 15vw; } }
+    width: 15vw; }
+  .whySpesu {
+    width: 70vw; } }
 
 .spaceMarginTop {
   padding-top: 80px; }
@@ -149,7 +169,11 @@ br {
 
 .spacesBox h3 {
   margin: 1vh 0 1vh 0;
-  font-size: 1.2rem; }
+  font-size: 1.1rem; }
+
+.spacesBox p {
+  font-size: 0.8rem;
+  font-weight: 300; }
 
 .spacesBox {
   display: flex;
@@ -160,8 +184,12 @@ br {
   border: solid 1px #EDF5F4; }
 
 .spacesBox img {
-  width: 50vw;
-  height: auto; }
+  width: 40vw;
+  height: 180px; }
+
+.spacesBoxCover {
+  width: 40vw;
+  object-fit: cover; }
 
 .spaceDetailBtn {
   border-radius: 5px;
@@ -169,13 +197,15 @@ br {
   border: none;
   height: 30px;
   width: 150px;
-  margin: 0 0 1vh 0; }
+  margin: 0 0 1vh 0;
+  color: white; }
 
 .spaceDetailBtn:hover {
-  background: #D9EBE9; }
+  background: #D9EBE9;
+  color: #0fb6a8; }
 
 .spaceDetailBtn a:hover {
-  color: #484848; }
+  color: #0fb6a8; }
 
 .spaceDetailBtn a {
   text-decoration: none;
