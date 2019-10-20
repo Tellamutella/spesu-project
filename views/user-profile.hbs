@@ -1,6 +1,6 @@
 <div class="spaceMarginTop profileBackground">
   <div class="profileColumn1">
-    <img class="profilePicture" src="/{{user.image}}" alt="image">
+    <img class="profilePicture" src="{{user.image}}" alt="image">
     <h1 class="profileName">{{user.firstname}} {{user.lastname}}</h1>
 
 
@@ -10,7 +10,7 @@
       <div class="profileBooked">
         {{#each booked}}
         <div class="profileBookedBox">
-          <img class="profileCover" src="/{{this.space.image}}" alt="coffee shop">
+          <img class="profileCover" src="{{this.space.image}}" alt="coffee shop">
           <div class="profileBookedColumn">
             <h2>{{this.space.name}}</h2>
             <h3>{{this.bookingPeriod}}, {{this.space.location}}</h2>

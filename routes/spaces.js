@@ -3,7 +3,7 @@ var router = express.Router();
 var Space = require("../models/space");
 var mongoose = require("mongoose");
 var multer = require("multer");
-var upload = multer({ dest: `${__dirname}/../uploads/` });
+const uploadCloud = require("../config/cloudinary.js");
 const Booking = require("../models/booking");
 const axios = require("axios");
 
@@ -61,7 +61,7 @@ router.get("/spaces/create/", (req, res) => {
   res.render("space-create");
 });
 
-router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
+router.post("/spaces/create", uploadCloud.single("spaceImage"), (req, res) => {
   axios
     .get(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${req.body.address}.json?access_token=${access_token}`
@@ -70,7 +70,7 @@ router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
       Space.create({
         name: req.body.name,
         location: `${req.body.start}-${req.body.end}`,
-        image: req.file.filename,
+        image: req.file.url,
         description: req.body.description,
         owner: mongoose.Types.ObjectId(req.session.currentUser._id),
         address: req.body.address,
@@ -85,9 +85,9 @@ router.post("/spaces/create", upload.single("spaceImage"), (req, res) => {
           res.send(err);
         });
     })
-    .catch(err=>{
+    .catch(err => {
       res.send(err);
-    })
+    });
 });
 
 router.get("/spaces/:spaceId", (req, res) => {

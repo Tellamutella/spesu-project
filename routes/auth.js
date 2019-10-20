@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const User = require("../models/user");
 var multer = require("multer");
-var upload = multer({ dest: `${__dirname}/../uploads/` });
+const uploadCloud = require("../config/cloudinary.js");
 var Space = require("../models/space");
 var Booking = require("../models/booking");
 
@@ -11,12 +11,12 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", upload.single("userImage"), (req, res, next) => {
+router.post("/signup", uploadCloud.single("userImage"), (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
   const firstname = req.body.firstname;
   const lastname = req.body.lastname;
-  const image = req.file.filename;
+  const image = req.file.url;
   const bcryptSalt = 10;
   User.findOne({ username: username })
     .then(user => {

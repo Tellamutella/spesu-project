@@ -8,7 +8,7 @@
     {{#each booked}}
     {{!-- <a href=""> --}}
     <div class="bookedBox">
-      <img class="cover" src="/{{this.space.image}}" alt="coffee shop">
+      <img class="cover" src="{{this.space.image}}" alt="coffee shop">
       <h1 class="bookedBoxTitle">{{this.space.name}}</h1>
       <h2>{{this.bookingPeriod}}, {{this.space.location}}</h2>
     </div>
@@ -24,7 +24,7 @@
     <div class="spacesColumn">
       {{#each space}}
       <div class="spacesBox">
-        <img class="spacesBoxCover" src="/{{image}}" alt="coffee shop">
+        <img class="spacesBoxCover" src="{{image}}" alt="coffee shop">
         <div class="spacesBoxColumn marginLeft">
           <div>
             <h3>{{name}}</h3>
